@@ -1,0 +1,23 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap'); */
+
+@import url("https://fonts.googleapis.com/css2?family=Urbanist&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Urbanist", sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: var(--image-gradient), url("./Assets/bg-2.png");
+  background-size: cover;
+  background-position-y: top;
+  background-position-x: center;
+  background-repeat: no-repeat;
+}
+
+body.bg-home {
+  background-position-x: right;
+}
+
+body.bg-people {
+  background-position-x: center;
+}

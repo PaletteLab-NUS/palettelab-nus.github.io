@@ -1,0 +1,137 @@
+.about-main-title {
+  font-size: 2.6em;
+  padding-bottom: 50px;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.team-section {
+  margin-bottom: 60px;
+}
+
+.section-title {
+  font-size: 1.8em;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgba(121, 120, 214, 0.3);
+}
+
+.team-row {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.team-card-item {
+  width: 100%;
+  min-width: 0;
+}
+
+.team-card-item a {
+  cursor: pointer;
+  display: block;
+  height: 100%;
+}
+
+.team-card-small {
+  background: rgba(31, 30, 46, 0.5);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(121, 120, 214, 0.2);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.team-card-small:hover {
+  transform: translateY(-8px);
+  border-color: rgba(121, 120, 214, 0.6);
+  box-shadow: 0 8px 20px rgba(121, 120, 214, 0.2);
+}
+
+.team-card-image-small {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  background: rgba(121, 120, 214, 0.1);
+}
+
+.team-card-image-small img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.3s ease;
+}
+
+.team-card-small:hover .team-card-image-small img {
+  transform: scale(1.05);
+}
+
+.team-card-body-small {
+  padding: 15px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.team-card-body-small h4 {
+  color: #fff;
+  font-size: 1.1em;
+  margin-bottom: 8px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.team-role-small {
+  font-size: 0.95em;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.team-description-small {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.9em;
+  line-height: 1.4;
+  margin-bottom: 0;
+  flex-grow: 1;
+}
+
+@media (max-width: 992px) {
+  .team-row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.5em;
+  }
+
+  .about-main-title {
+    font-size: 1.8em;
+  }
+}
+
+@media (max-width: 576px) {
+  .team-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .team-card-item {
+    max-width: 320px;
+    justify-self: start;
+  }
+
+  .section-title {
+    font-size: 1.3em;
+  }
+
+  .team-card-image-small {
+    height: 240px;
+  }
+}
