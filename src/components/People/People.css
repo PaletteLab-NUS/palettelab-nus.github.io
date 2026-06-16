@@ -124,7 +124,12 @@
 
   .team-card-item {
     max-width: 320px;
-    justify-self: start;
+    /* Center the card in the single-column grid on small screens. */
+    justify-self: center;
+  }
+
+  .team-card-body-small {
+    text-align: center;
   }
 
   .section-title {
