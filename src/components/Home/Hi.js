@@ -1,8 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../Assets/avatar.svg";
 import Tilt from "react-parallax-tilt";
-import homeLogo from "../../Assets/palette-logo-480-shadow.png";
+import homeLogo from "../../assets/palette-logo-480-shadow.png";
 
 import Type from "./Type";
 
@@ -11,7 +10,7 @@ function Hi() {
   return (
     <section className="home-hero" id="home">
       <Container className="home-content">
-        <Row className="home-hero-row">
+        <Row className="home-hero-row g-0">
           <Col md={7} className="home-header">
             <h1 className="heading">Hi there!</h1>
 

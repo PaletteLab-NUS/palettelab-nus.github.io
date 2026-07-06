@@ -1,0 +1,249 @@
+.publications-page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.publications-section {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  padding-bottom: 80px !important;
+}
+
+.publications-container {
+  max-width: 980px;
+  text-align: left;
+}
+
+.publications-intro {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 720px;
+  margin: 0 auto 48px;
+  line-height: 1.6;
+}
+
+.publications-year-group {
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.publications-year-heading {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  padding-bottom: 0;
+  text-align: left;
+}
+
+.publications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.publication-entry {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.publications-year-group .publications-list .publication-entry:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.publication-thumbnail-wrap {
+  flex: 0 0 300px;
+  width: 300px;
+}
+
+.publication-thumbnail {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 4px;
+  display: block;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.publication-thumbnail-placeholder {
+  min-height: 138px;
+}
+
+.publication-content {
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+}
+
+.publication-venue-short {
+  color: #a199f1;
+  margin: 0 0 8px;
+  line-height: 1.8;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.publication-title {
+  color: #fff;
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0 0 10px;
+  line-height: 1.35;
+  text-align: left;
+}
+
+.publication-authors {
+  color: rgba(255, 255, 255, 0.82);
+  margin: 0 0 8px;
+  line-height: 1.8;
+  font-size: 1rem;
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0px;
+}
+
+.pub-author-lab > a {
+  background: rgba(161, 153, 241, 0.32);
+  padding: 2px 2px;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.pub-author-separator {
+  color: rgba(255, 255, 255, 0.72);
+  margin-right: 2px;
+}
+
+.pub-author-external {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.pub-author-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.pub-author-link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.publication-venue {
+  color: rgba(255, 255, 255, 0.68);
+  margin: 0 0 14px;
+  line-height: 1.5;
+  font-size: 0.98rem;
+  text-align: left;
+}
+
+.publication-award {
+  margin: 0 0 12px;
+}
+
+.publication-award-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(161, 153, 241, 0.18);
+  border: 1px solid rgba(161, 153, 241, 0.4);
+  color: #d8d3ff;
+  font-size: 0.88rem;
+}
+
+.publication-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 14px 18px;
+}
+
+.publication-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.publication-action:hover {
+  color: #fff;
+}
+
+.publication-action-icon {
+  display: inline-flex;
+  font-size: 1rem;
+}
+
+.publication-action-caret {
+  font-size: 0.85rem;
+  margin-left: 2px;
+}
+
+.publication-details {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.publication-abstract {
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.65;
+  margin: 0 0 16px;
+  font-size: 0.96rem;
+}
+
+.publication-bibtex {
+  margin: 0;
+  padding: 14px 16px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+@media (max-width: 768px) {
+  .publications-year-heading {
+    font-size: 1.6rem;
+  }
+
+  .publication-entry {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .publication-thumbnail-wrap {
+    flex: none;
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .publication-title {
+    font-size: 1.15rem;
+  }
+
+  .publication-actions {
+    gap: 12px 14px;
+  }
+}

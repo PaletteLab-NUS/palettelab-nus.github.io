@@ -4,12 +4,6 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-const appBase = "/PaletteLab";
-
-if (process.env.NODE_ENV === "development" && window.location.pathname === "/") {
-  window.history.replaceState(null, "", `${appBase}/`);
-}
-
 ReactDOM.render(
   <React.StrictMode>
     <App />

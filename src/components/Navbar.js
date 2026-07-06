@@ -3,7 +3,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 // import logo from "../Assets/logo.png";
-import logo from "../Assets/palette-logo-480.webp";
+import logo from "../assets/palette-logo-480.webp";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import { CgGitFork } from "react-icons/cg";
@@ -13,6 +13,8 @@ import {
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
+  AiOutlineFileText,
+  AiOutlineHeart,
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
@@ -71,10 +73,30 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 as={Link}
+                to="/publications"
+                onClick={() => updateExpanded(false)}
+              >
+                <AiOutlineFileText style={{ marginBottom: "2px" }} /> Publications
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
                 to="/people"
                 onClick={() => updateExpanded(false)}
               >
                 <AiOutlineUser style={{ marginBottom: "2px" }} /> People
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/memories"
+                onClick={() => updateExpanded(false)}
+              >
+                <AiOutlineHeart style={{ marginBottom: "2px" }} /> Memories
               </Nav.Link>
             </Nav.Item>
 

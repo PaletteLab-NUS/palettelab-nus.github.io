@@ -1,0 +1,30 @@
+- date: "2026-06-19"
+  about: >
+    Jingyi Li visited our lab and gave a talk on "Power, Norms, & Radical Humility: Towards Artistic Support Tools".
+
+- date: "2026-04-13"
+  about: >
+    Palette Lab is heading to CHI 2026 in Barcelona! See you there! 🇪🇸
+  video:
+    - "https://www.youtube.com/watch?v=5vBJtzax438"
+  link:
+    - label: "Our paper: VizCrit"
+      url: "https://ejane.me/vizcrit.html"
+
+- date: "2026-03-23"
+  about: >
+    Samuel Rhys Cox visited our lab and gave a talk on "Personalisation, Latency, and Nudging: Alternative Paradigms for Emotional and Health-Oriented Chatbots".
+
+- date: "2026-02-11"
+  about: >
+    Jane and the Palette Lab were featured in NUS News for the International Day of Women and Girls in Science.
+  photos:
+    - path: "2026-she_speaks_science.jpeg"
+      caption: "A glimpse of the Palette Lab"
+    - path: "2026-she_speaks_science_feature.jpeg"
+      caption: "Jane and others featured in NUS News"
+  link:
+    - label: "NUS News"
+      url: https://news.nus.edu.sg/she-speaks-science/
+    - label: "Jane's interview answers"
+      url: https://ejane.me/assets/pdf/interview_womenandgirlsinscience.pdf

@@ -5,27 +5,35 @@
   <meta charset="utf-8" />
   <link rel="icon" href="%PUBLIC_URL%/palette-logo-480.webp" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#000000" />
+  <meta name="theme-color" content="#7978d6" />
   
   <title>Palette Lab | NUS</title>
-  <meta name="description" content="Official website of Palette Lab">
+  <meta name="description" content="Website of NUS Palette Lab">
 
   <meta itemprop="name" content="Palette Lab">
   <meta itemprop="description" content="Official website">
-  <meta itemprop="image" content="https://palettelab-nus.github.io/PaletteLab/palette-logo-480.webp">
+  <meta itemprop="image" content="https://palettelab-nus.github.io/palette-logo-480.webp">
 
-  <meta property="og:url" content="https://palettelab-nus.github.io/PaletteLab/">
+  <meta property="og:url" content="https://palettelab-nus.github.io/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Palette Lab">
   <meta property="og:description" content="Official website">
-  <meta property="og:image" content="https://palettelab-nus.github.io/PaletteLab/palette-logo-480.webp">
+  <meta property="og:image" content="https://palettelab-nus.github.io/palette-logo-480.webp">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Palette Lab">
   <meta name="twitter:description" content="Official website">
-  <meta name="twitter:image" content="https://palettelab-nus.github.io/PaletteLab/palette-logo-480.webp">
-  
-  </head>
+  <meta name="twitter:image" content="https://palettelab-nus.github.io/palette-logo-480.webp">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YEZHMV7C0Y"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-YEZHMV7C0Y');
+  </script>
+</head>
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -34,20 +42,5 @@
   
 </body>
 
-<script>
-  (function(l) {
-    var params = new URLSearchParams(l.search);
-    var p = params.get('p');
-    if (p) {
-      var q = params.get('q');
-      window.history.replaceState(
-        null, null,
-        l.pathname + p +
-        (q ? '?' + q.replace(/~and~/g, '&') : '') +
-        l.hash
-      );
-    }
-  }(window.location))
-</script>
 
 </html>

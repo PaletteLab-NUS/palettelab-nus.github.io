@@ -1,0 +1,115 @@
+.notfound-section {
+  position: relative;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 88px 1.25rem 2.5rem;
+}
+
+.notfound-arcade-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.notfound-arcade {
+  width: min(100%, 760px);
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  color: #ffffff;
+  text-align: center;
+  box-shadow: none;
+}
+
+.notfound-code {
+  font-size: clamp(3.2rem, 14vw, 5rem);
+  line-height: 1;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 0 24px rgba(161, 153, 241, 0.35);
+  margin: 0 0 0.75rem;
+}
+
+.notfound-subtitle {
+  font-size: clamp(1.35rem, 4.5vw, 2rem);
+  line-height: 1.2;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 1.25rem;
+}
+
+.notfound-back-btn {
+  display: inline-block;
+  background-color: #7978d686;
+  border: 1px solid #a199f15e;
+  color: #fff;
+  border-radius: 10px;
+  padding: 0.55rem 1.1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.notfound-divider {
+  width: 100%;
+  margin: 0 0 1.5rem;
+  border: none;
+  border-top: 2px solid rgba(121, 120, 214, 0.35);
+}
+
+.notfound-back-btn:hover,
+.notfound-back-btn:focus {
+  color: #fff;
+  text-decoration: none;
+  transform: translateY(-1px);
+  background-color: #6d20c5d7;
+  border-color: #6d20c5d7;
+}
+
+.notfound-game-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.notfound-shooter-canvas {
+  display: block;
+  width: 100%;
+  max-width: 760px;
+  height: auto;
+  background: transparent;
+  touch-action: none;
+  cursor: crosshair;
+}
+
+.notfound-game-hint {
+  margin: 0.85rem 0 0;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+@media (max-width: 767px) {
+  .notfound-section {
+    padding-top: 76px;
+    padding-bottom: 2rem;
+  }
+
+  .notfound-code {
+    font-size: clamp(2.8rem, 18vw, 3.6rem);
+  }
+
+  .notfound-subtitle {
+    font-size: clamp(1.2rem, 5.5vw, 1.6rem);
+  }
+
+  .notfound-game-hint {
+    font-size: 0.95rem;
+  }
+}

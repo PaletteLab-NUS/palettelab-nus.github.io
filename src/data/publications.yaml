@@ -1,0 +1,37 @@
+- title: "VizCrit: Exploring Strategies for Displaying Computational Feedback in a Visual Design Tool"
+  authors:
+    - "Mingyi Li"
+    - "Mengyi Chen"
+    - "Sarah Luo"
+    - "Yining Cao"
+    - "Haijun Xia"
+    - "Maitraye Das"
+    - "Steven P. Dow"
+    - "Jane L. E"
+  year: 2026
+  venue: "Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems"
+  venue_short: "CHI 2026"
+  location: "Barcelona, Spain"
+  abstract: >
+    Visual design instructors often provide multi-modal feedback, mixing annotations with text.
+    We introduce VizCrit, a system for providing computational feedback that supports the
+    actionability spectrum, realized through algorithmic issue detection and visual annotation
+    generation. In a between-subjects study (N=36), novices revised a design under one of three
+    conditions: textbook-based, awareness-centered, or solution-centered feedback.
+  arxiv: "https://arxiv.org/abs/2603.04754"
+  doi: "https://doi.org/10.1145/3772318.3791579"
+  website: "https://ejane.me/vizcrit.html"
+  video: "https://www.youtube.com/watch?v=R40gaLnzhEc"
+  github: "https://github.com/mingyi09/VizCrit"
+  thumbnail: "2026-chi-vizcrit.jpg"
+  bibtex: |
+    @inproceedings{li2026vizcrit,
+      author = {Li, Mingyi and Chen, Mengyi and Luo, Sarah and Cao, Yining and Xia, Haijun and Das, Maitraye and Dow, Steven P. and E, Jane L.},
+      title = {VizCrit: Exploring Strategies for Displaying Computational Feedback in a Visual Design Tool},
+      year = {2026},
+      booktitle = {Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems},
+      publisher = {Association for Computing Machinery},
+      doi = {10.1145/3772318.3791579},
+      url = {https://doi.org/10.1145/3772318.3791579},
+      location = {Barcelona, Spain}
+    }

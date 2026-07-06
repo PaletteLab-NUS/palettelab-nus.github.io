@@ -1,11 +1,10 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../Assets/avatar.svg";
 import Tilt from "react-parallax-tilt";
-import homeLogo from "../../Assets/palette-logo-480.webp";
-import homeLogo_blue from "../../Assets/palette-logo-480-blue-test.png";
-import homeLogo_green from "../../Assets/palette-logo-480-green-test.png";
-import homeLogo_pink from "../../Assets/palette-logo-480-pink-test.png";
+import homeLogo from "../../assets/palette-logo-480.webp";
+import homeLogo_blue from "../../assets/palette-logo-480-blue-test.png";
+import homeLogo_green from "../../assets/palette-logo-480-green-test.png";
+import homeLogo_pink from "../../assets/palette-logo-480-pink-test.png";
 
 function Introduction() {
   return (
@@ -65,15 +64,35 @@ function Introduction() {
             </p>
           </Col>
           <Col md={3} className="myAvtar">
-            <Tilt>
-              <img src={homeLogo_blue} className="img-fluid" alt="avatar" style={{ width: "200px" }} />
-            </Tilt>
-            <Tilt>
-              <img src={homeLogo_green} className="img-fluid" alt="avatar" style={{ width: "200px" }} />
-            </Tilt>
-            <Tilt>
-              <img src={homeLogo_pink} className="img-fluid" alt="avatar" style={{ width: "200px" }} />
-            </Tilt>
+            <div className="intro-avatars">
+              <div className="intro-avatar-item">
+                <Tilt>
+                  <img
+                    src={homeLogo_blue}
+                    className="img-fluid intro-avatar-img"
+                    alt="Palette Lab blue mascot"
+                  />
+                </Tilt>
+              </div>
+              <div className="intro-avatar-item">
+                <Tilt>
+                  <img
+                    src={homeLogo_green}
+                    className="img-fluid intro-avatar-img"
+                    alt="Palette Lab green mascot"
+                  />
+                </Tilt>
+              </div>
+              <div className="intro-avatar-item">
+                <Tilt>
+                  <img
+                    src={homeLogo_pink}
+                    className="img-fluid intro-avatar-img"
+                    alt="Palette Lab pink mascot"
+                  />
+                </Tilt>
+              </div>
+            </div>
           </Col>
         </Row>
       </Container>

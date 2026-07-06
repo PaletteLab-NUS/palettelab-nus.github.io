@@ -16,6 +16,52 @@
   border-bottom: 2px solid rgba(121, 120, 214, 0.3);
 }
 
+.director-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 4fr);
+  gap: 30px;
+  align-items: start;
+}
+
+.director-card-item {
+  width: 100%;
+  min-width: 0;
+}
+
+.director-card-item a {
+  cursor: pointer;
+  display: block;
+}
+
+.director-bio {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.05em;
+  line-height: 1.7;
+  padding-top: 8px;
+}
+
+.director-bio p {
+  margin-bottom: 1.25em;
+}
+
+.director-bio p:last-child {
+  margin-bottom: 0;
+}
+
+.director-bio a {
+  color: #a199f1;
+  text-decoration: underline;
+}
+
+.director-bio a:hover {
+  color: #fff;
+}
+
+.director-hiring {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
 .team-row {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -113,6 +159,20 @@
 
   .about-main-title {
     font-size: 1.8em;
+  }
+
+  .director-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .director-bio {
+    display: none;
+  }
+
+  .director-card-item {
+    max-width: 320px;
+    justify-self: center;
   }
 }
 
