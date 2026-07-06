@@ -15,13 +15,28 @@ const publicationImages = require.context(
   /\.(png|jpe?g|webp|gif)$/i
 );
 
-function resolveThumbnail(filename) {
-  if (!filename) return null;
+function isRemoteImageUrl(value) {
+  try {
+    const { protocol } = new URL(value);
+    return protocol === "http:" || protocol === "https:";
+  } catch {
+    return false;
+  }
+}
+
+function resolveThumbnail(thumbnail) {
+  if (!thumbnail) return null;
+
+  if (isRemoteImageUrl(thumbnail)) {
+    return thumbnail;
+  }
+
+  const filename = thumbnail.replace(/^.*\//, "");
 
   try {
     return publicationImages(`./${filename}`);
   } catch (e) {
-    console.warn(`Publication thumbnail not found: ${filename}`);
+    console.warn(`Publication thumbnail not found: ${thumbnail}`);
     return null;
   }
 }

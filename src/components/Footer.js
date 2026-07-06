@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { AiFillInstagram } from "react-icons/ai";
+import { AiFillGithub, AiFillInstagram } from "react-icons/ai";
 import { FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import { ReactComponent as BlueskyIcon } from "../assets/icons/bluesky-brands-solid-full.svg";
 
@@ -24,6 +24,11 @@ const socialLinks = [
     href: "https://www.linkedin.com/company/nus-palette-lab",
     label: "LinkedIn",
     icon: <FaLinkedinIn />,
+  },
+  {
+    href: "https://github.com/PaletteLab-NUS",
+    label: "GitHub",
+    icon: <AiFillGithub />,
   },
 ];
 
