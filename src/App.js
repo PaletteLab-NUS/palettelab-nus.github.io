@@ -18,26 +18,50 @@ import "./style.css";
 import "./App.css";
 import NotFound from "./components/NotFound/NotFound";
 
+const PAGE_META = {
+  "/": {
+    title: "Palette Lab | NUS",
+    description: "Website of NUS Palette Lab",
+    bodyClass: "bg-home",
+  },
+  "/people": {
+    title: "Team | Palette Lab",
+    description: "Meet the researchers, students, and collaborators of NUS Palette Lab.",
+    bodyClass: "bg-people",
+  },
+  "/publications": {
+    title: "Pub | Palette Lab",
+    description: "Explore research publications from NUS Palette Lab.",
+    bodyClass: "bg-publications",
+  },
+  "/memories": {
+    title: "Memories | Palette Lab",
+    description: "Browse highlights and memories from NUS Palette Lab.",
+    bodyClass: "bg-memories",
+  },
+};
+
 function AppContent() {
   const location = useLocation();
 
   useEffect(() => {
+    const normalizedPath = location.pathname.replace(/\/+$/, "") || "/";
+    const { title, description, bodyClass } =
+      PAGE_META[normalizedPath] ?? PAGE_META["/"];
     const body = document.body;
-    body.classList.remove("bg-home", "bg-people");
+    const descriptionMeta = document.querySelector('meta[name="description"]');
 
-    if (location.pathname === "/" || location.pathname === "") {
-      body.classList.add("bg-home");
-    } else if (location.pathname === "/people" || location.pathname === "/people/") {
-      body.classList.add("bg-people");
-    } else if (
-      location.pathname === "/publications" ||
-      location.pathname === "/memories"
-    ) {
-      body.classList.add("bg-people");
-    } else {
-      // For unknown routes (e.g. 404 page), keep the homepage background.
-      body.classList.add("bg-home");
+    document.title = title;
+    if (descriptionMeta) {
+      descriptionMeta.setAttribute("content", description);
     }
+    body.classList.remove(
+      "bg-home",
+      "bg-people",
+      "bg-publications",
+      "bg-memories"
+    );
+    body.classList.add(bodyClass);
   }, [location.pathname]);
 
   return (

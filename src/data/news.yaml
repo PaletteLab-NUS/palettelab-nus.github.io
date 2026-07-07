@@ -1,6 +1,11 @@
 - date: "2026-06-19"
   about: >
     Jingyi Li visited our lab and gave a talk on "Power, Norms, & Radical Humility: Towards Artistic Support Tools".
+  photos:
+    - path: "2026-jingyi-talk-1.JPG"
+      caption: "Jingyi Li is giving a talk"
+    - path: "2026-jingyi-visit.JPG"
+      caption: "Jingyi Li is visiting the Palette Lab celebrating the birthday of Thuyen"
 
 - date: "2026-04-13"
   about: >
@@ -14,6 +19,9 @@
 - date: "2026-03-23"
   about: >
     Samuel Rhys Cox visited our lab and gave a talk on "Personalisation, Latency, and Nudging: Alternative Paradigms for Emotional and Health-Oriented Chatbots".
+  photos:
+    - path: "2026-samuel-visit.JPG"
+      caption: "Samuel Rhys Cox visiting the Palette Lab"
 
 - date: "2026-02-11"
   about: >
