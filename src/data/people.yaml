@@ -4,6 +4,13 @@
   website: "https://ejane.me/"
   category: "professor"
   image: "janee_purple-480.webp"
+  color: "#6B4E9B"
+  textColor: "#F5E6FF"
+  interests:
+    - "Creativity Support"
+    - "Dance"
+    - "Photography"
+    - "Food"
   bio: |
     <p>I'm interested in thinking about how to
     design computational tools that can support users in developing domain
@@ -16,59 +23,115 @@
 
 "Bekzat Tilekbay":
   name: "Bekzat Tilekbay"
-  description: "KAIST PhD coadvised with Juho Kim"
+  description: "PhD (at KAIST) coadvised with Juho Kim"
   website: "https://scholar.google.com/citations?user=O4vZpsIAAAAJ&hl=en"
   category: "labMember"
   image: "bekzat.jpeg"
+  color: "#2D6A4F"
+  textColor: "#D8F3DC"
+  interests:
+    - "Crowdsourcing"
+    - "Human-AI Interaction"
+    - "Hiking"
+    - "Chess"
 
 "Izabella Rodrigues":
   name: "Izabella (Bella) Rodrigues"
-  description: "NUS PhD"
+  description: "PhD"
   website: "https://www.izabellarodrigues.com/"
   category: "labMember"
   image: "bella.webp"
+  color: "#C9184A"
+  textColor: "#FFE5EC"
+  interests:
+    - "Design Research"
+    - "Sketching"
+    - "Ceramics"
+    - "Travel"
 
 "Zifei Han":
   name: "Zifei (FeiFei) Han"
-  description: "NUS PhD"
+  description: "PhD coadvised with Mohan Kankanhalli"
   website: "https://hanzifeifei.com/index.html"
   category: "labMember"
   image: "feifeiheadshot.jpeg"
+  color: "#E07A5F"
+  textColor: "#FFF8F0"
+  interests:
+    - "Visual Design"
+    - "Illustration"
+    - "Cats"
+    - "Baking"
 
 "Kevin Lam":
   name: "Kevin Lam"
-  description: "NUS PhD coadvised with Ben Leong"
+  description: "PhD"
   website: "https://lamfuyuan.com/"
   category: "labMember"
   image: "kevin.jpeg"
+  color: "#1D3557"
+  textColor: "#A8DADC"
+  interests:
+    - "Systems"
+    - "Programming Languages"
+    - "Coffee"
+    - "Board Games"
 
 "Romrawin Chumpu":
   name: "Romrawin (Jin) Chumpu"
-  description: "NUS CS PhD coadvised with Fayao Liu"
+  description: "PhD coadvised with Fayao Liu"
   website: "https://romrawinjp.github.io/"
   category: "labMember"
   image: "jin.jpg"
+  color: "#457B9D"
+  textColor: "#F1FAEE"
+  interests:
+    - "Computer Vision"
+    - "Deep Learning"
+    - "Anime"
+    - "Running"
 
 "Xiyuan Wang":
   name: "Xiyuan Wang"
-  description: "intern • incoming NUS PhD with Palette Lab"
+  description: "PhD"
   website: "https://horanny.github.io/"
   category: "labMember"
   image: "xiyuan.jpg"
+  color: "#9B5DE5"
+  textColor: "#F0E6FF"
+  interests:
+    - "HCI"
+    - "Data Visualization"
+    - "Music"
+    - "Reading"
 
 "Nguyen-Truong Vinh-Thuyen":
   name: "Nguyen-Truong Vinh-Thuyen"
-  description: "intern • incoming NUS PhD advised by Gabriel Lipkowitz"
+  description: "PhD coadvised with Gabriel Lipkowitz"
   website: "https://ntvthuyen.com/"
   category: "labMember"
   image: "thuyen.jpg"
+  color: "#0081A7"
+  textColor: "#FDFCDC"
+  interests:
+    - "Computational Biology"
+    - "Machine Learning"
+    - "Cooking"
+    - "Cycling"
 
 "Liwenhan Xie":
-  name: "Liwenhan Xie (Shelly)"
+  name: "Liwenhan (Shelly) Xie"
   description: "postdoc"
   website: "https://shellywhen.github.io/"
   category: "labMember"
   image: "shelly.jpg"
+  color: "#BC6C25"
+  textColor: "#FEFAE0"
+  interests:
+    - "Creativity Tools"
+    - "Frontend"
+    - "Film"
+    - "Yoga"
 
 "Sixing Tao":
   name: "Sixing (Jonathan) Tao"
@@ -76,6 +139,13 @@
   website: "https://sixingtao.site/"
   category: "labMember"
   image: "sixing.webp"
+  color: "#588157"
+  textColor: "#DAD7CD"
+  interests:
+    - "UI/UX"
+    - "Product Design"
+    - "Photography"
+    - "Badminton"
 
 "Jiayu Yin":
   name: "Jiayu (Yuki) Yin"
@@ -83,6 +153,13 @@
   website: "https://jiayuyy.github.io/Yuki/"
   category: "labMember"
   image: "jiayu.jpg"
+  color: "#F4A261"
+  textColor: "#264653"
+  interests:
+    - "Social Computing"
+    - "Qualitative Methods"
+    - "Tea"
+    - "Journaling"
 
 "Danilo Symonette":
   name: "Danilo Symonette"
@@ -90,6 +167,13 @@
   website: "https://profiles.stanford.edu/danilo-symonette"
   category: "future"
   image: "danilo.jpeg"
+  color: "#7209B7"
+  textColor: "#E0AAFF"
+  interests:
+    - "Accessibility"
+    - "Mobile Computing"
+    - "Jazz"
+    - "Basketball"
 
 "Gabriella Ugwonali":
   name: "Gabriella Ugwonali"
@@ -97,6 +181,13 @@
   website: "https://micheleamaka.com/"
   category: "labMember"
   image: "gabriella.jpg"
+  color: "#D62828"
+  textColor: "#FCBF49"
+  interests:
+    - "Graphic Design"
+    - "Typography"
+    - "Fashion"
+    - "Poetry"
 
 "Fuling Sun":
   name: "Fuling Sun"
@@ -104,6 +195,13 @@
   website: "https://fulingsun.me/"
   category: "labMember"
   image: "fuling.jpeg"
+  color: "#3A86FF"
+  textColor: "#FFBE0B"
+  interests:
+    - "Information Visualization"
+    - "Interaction Design"
+    - "Swimming"
+    - "Origami"
 
 "Mingyi Li":
   name: "Mingyi Li"
@@ -111,6 +209,13 @@
   website: "https://mingyili.me/"
   category: "friends"
   image: "mingyi.jpg"
+  color: "#606C38"
+  textColor: "#FEFAE0"
+  interests:
+    - "Health Informatics"
+    - "Accessibility"
+    - "Gardening"
+    - "Cooking"
 
 "Mengyi Chen":
   name: "Mengyi (Hazel) Chen"
@@ -118,6 +223,13 @@
   website: "https://www.linkedin.com/in/hazel-chen-90606a255/"
   category: "friends"
   image: "mengyi.jpeg"
+  color: "#FF006E"
+  textColor: "#FFFCF2"
+  interests:
+    - "User Research"
+    - "Service Design"
+    - "Painting"
+    - "K-pop"
 
 "Yize Wei":
   name: "Yize (Isa) Wei"
@@ -125,6 +237,13 @@
   website: "https://yizewei.vercel.app/"
   category: "friends"
   image: "yize.webp"
+  color: "#8338EC"
+  textColor: "#FFFCF2"
+  interests:
+    - "Augmented Reality"
+    - "Wearables"
+    - "Climbing"
+    - "Film Photography"
 
 "Tianqi Song":
   name: "Tianqi (Holly) Song"
@@ -132,3 +251,10 @@
   website: "https://hollysong.site/"
   category: "friends"
   image: "tianqi.jpg"
+  color: "#FB8500"
+  textColor: "#023047"
+  interests:
+    - "Bioinformatics"
+    - "Data Science"
+    - "Hiking"
+    - "Watercolor"

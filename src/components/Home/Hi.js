@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Tilt from "react-parallax-tilt";
-import homeLogo from "../../assets/palette-logo-480-shadow.png";
+import homeLogo from "../../assets/palette-logo-480.webp";
 
 import Type from "./Type";
 

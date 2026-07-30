@@ -16,6 +16,9 @@ function toTeamMembers(authors) {
       url: author.website,
       bio: author.bio || "",
       hiringNote: author.hiringNote || "",
+      color: author.color || "#7978D6",
+      textColor: author.textColor || "#FFFFFF",
+      interests: author.interests || [],
     }))
     .filter((member) => member.category)
     .sort((a, b) => (a.id || 0) - (b.id || 0));
@@ -30,27 +33,70 @@ function resolveTeamImage(image) {
   }
 }
 
+function renderCardFront(member, imageSrc) {
+  return (
+    <>
+      <div className="team-card-image-small">
+        <img src={imageSrc} alt={member.name} className="img-fluid" />
+      </div>
+      <div className="team-card-body-small">
+        <h4>{member.name}</h4>
+        <p className="team-role-small">
+          <span className="purple">{member.role}</span>
+        </p>
+        {member.description && (
+          <p className="team-description-small">{member.description}</p>
+        )}
+      </div>
+    </>
+  );
+}
+
 function renderTeamCard(member) {
   const imageSrc = resolveTeamImage(member.image);
+  const showFlip = false && member.category !== "friends";
+
+  if (!showFlip) {
+    return (
+      <a
+        href={member.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="team-card-link"
+      >
+        <div className="team-card-small team-card-simple">
+          {renderCardFront(member, imageSrc)}
+        </div>
+      </a>
+    );
+  }
+
   return (
     <a
       href={member.url}
       target="_blank"
       rel="noopener noreferrer"
-      style={{ textDecoration: "none" }}
+      className="team-card-link"
     >
-      <div className="team-card-small">
-        <div className="team-card-image-small">
-          <img src={imageSrc} alt={member.name} className="img-fluid" />
-        </div>
-        <div className="team-card-body-small">
-          <h4>{member.name}</h4>
-          <p className="team-role-small">
-            <span className="purple">{member.role}</span>
-          </p>
-          {member.description && (
-            <p className="team-description-small">{member.description}</p>
-          )}
+      <div className="team-card-flip">
+        <div className="team-card-inner">
+          <div className="team-card-front team-card-small">
+            {renderCardFront(member, imageSrc)}
+          </div>
+          <div
+            
+            className="team-card-back"
+            style={{ backgroundColor: member.color, display: 'none' }}
+          >
+            <ul
+              className="team-card-interests"
+              style={{ color: member.textColor }}
+            >
+              {member.interests.map((interest) => (
+                <li key={interest}>{interest}</li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </a>

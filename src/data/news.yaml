@@ -1,3 +1,15 @@
+- date: "2026-07-24"
+  about: >
+    We decorated our new lab space with colorful window papercuts!
+  photos:
+    - path: "2026-lab-cropping.JPG"
+      caption: "We were cropping the window papers thanks to Jane's tutorial"
+    - path: "2026-lab-final.JPG"
+      caption: "The final result is amazing!"
+    - path: "2026-lab-window.JPG"
+      caption: "An overview of the window with beautiful shadows."
+    - path: "2026-lab-gabriella.JPG"
+      caption: "Gabriella's window papercut is awesome!"
 - date: "2026-06-19"
   about: >
     Jingyi Li visited our lab and gave a talk on "Power, Norms, & Radical Humility: Towards Artistic Support Tools".
