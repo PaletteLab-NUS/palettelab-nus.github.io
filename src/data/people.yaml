@@ -36,21 +36,33 @@
  
 "Bekzat Tilekbay":
   name: "Bekzat Tilekbay"
-  description: "PhD (at KAIST) coadvised with Juho Kim"
+  description: "PhD (@KAIST) coadvised with Juho Kim"
   website: "https://scholar.google.com/citations?user=O4vZpsIAAAAJ&hl=en"
   category: "labMember"
   image: "bekzat.jpeg"
-  color: "#2D6A4F"
-  textColor: "#D8F3DC"
+  color: "#ba0707"
+  textColor: "#dee3e3"
   interests:
-    - ""
+    - "Human-AI Interaction"
+    - "Creativity Support Tools"
+    - "Learning"
+    - "Chess"
+    - "Formula 1"
+  bio: |
+    <p>I am interested in supporting creativity and learning with AI</p>
   trajectory:
     - label: "Daejeon"
-      loc: "36°22'20.0\"N 127°21'38.0\"E"
-      note: "Ph.D. @KAIST"
+      loc: "36°22'27.5\"N 127°21'56.3\"E"
+      note: "B.S., M.S., Ph.D., @KAIST, @KIXLAB"
     - label: "Singapore"
       loc: "1°17'41.0\"N 103°46'31.4\"E"
-      note: "Ph.D. @Palette Lab"
+      note: "Ph.D., @Palette Lab"
+    - label: "Seattle"
+      loc: "47°38'53.8\"N 122°20'54.5\"W"
+      note: "intern, @Adobe"
+    - label: "Atyrau"
+      loc: "47°06'02.5\"N 51°55'32.9\"E"
+      note: "high school, @AtyrauBIL"
  
 "Izabella Rodrigues":
   name: "Izabella (Bella) Rodrigues"
