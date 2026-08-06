@@ -63,6 +63,9 @@
     - label: "Atyrau"
       loc: "47°06'02.5\"N 51°55'32.9\"E"
       note: "high school, @AtyrauBIL"
+    - label: "Kulsary"
+      loc: "46°57'15.5\"N 53°59'07.8\"E"
+      note: "hometown"
  
 "Izabella Rodrigues":
   name: "Izabella (Bella) Rodrigues"
