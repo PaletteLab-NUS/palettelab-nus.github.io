@@ -40,7 +40,7 @@ const STAGE_IDS = STAGES.map((s) => s.id);
 const STAGE_COLOR = Object.fromEntries(STAGES.map((s) => [s.id, s.color]));
 
 const GROWING_UP_RE =
-  /\b(?:hometown|grew\s*up|childhood|born(?:\s+in)?|formative\s+years?|high\s*school)\b/i;
+  /\b(?:hometown|grew\s*up|growing\s*up|childhood|born(?:\s+in)?|formative\s+years?|high\s*school)\b/i;
 const PHD_RE =
   /\b(?:ph\.?\s*d\.?|dphil|doctorate|post[\s-]?docs?(?:toral)?|professor|faculty)\b/i;
 const MASTER_RE =
@@ -328,21 +328,28 @@ function curvedSegment(a, b, { curvature = 0.18, sign = 1, lane = 0 } = {}) {
   return coords;
 }
 
+/** Undirected city pair key so A→B and B→A share the same lane group. */
 function edgeKey(fromLabel, toLabel) {
-  return `${String(fromLabel || "").trim().toLowerCase()}→${String(
-    toLabel || ""
-  )
-    .trim()
-    .toLowerCase()}`;
+  const a = String(fromLabel || "").trim().toLowerCase();
+  const b = String(toLabel || "").trim().toLowerCase();
+  return a <= b ? `${a}↔${b}` : `${b}↔${a}`;
 }
 
-/** Centered lane index: 1 person → 0; 2 → -0.5, +0.5; 3 → -1, 0, +1; … */
+/**
+ * Centered lane index: 1 person → 0; 2 → -0.5, +0.5; 3 → -1, 0, +1; …
+ * Reverse hops flip the lane so the perpendicular still fans geographic sides
+ * (perp reverses with travel direction).
+ */
 function laneForEdge(edgeLanes, personId, fromLabel, toLabel) {
   const peers = edgeLanes.get(edgeKey(fromLabel, toLabel));
   if (!peers || peers.length <= 1) return 0;
   const idx = peers.indexOf(personId);
   if (idx < 0) return 0;
-  return idx - (peers.length - 1) / 2;
+  let lane = idx - (peers.length - 1) / 2;
+  const from = String(fromLabel || "").trim().toLowerCase();
+  const to = String(toLabel || "").trim().toLowerCase();
+  if (from > to) lane = -lane;
+  return lane;
 }
 
 /** Densify a stop sequence into one curved LineString with per-edge lane offsets. */
@@ -426,8 +433,8 @@ function buildRingLine(center, { personId } = {}) {
 }
 
 /**
- * For each directed city→city hop, list personIds sharing that edge
- * (stable order) so overlapping routes can take different lanes.
+ * For each undirected city↔city hop, list personIds sharing that corridor
+ * (stable order) so overlapping / reverse routes take different lanes.
  */
 function buildEdgeLanes(membersWithStops) {
   const edgeLanes = new Map();
@@ -1370,6 +1377,9 @@ function TrajectoryMap({
       {!embedded && <h2 className="section-title">Where We&apos;re From</h2>}
       <div className="trajectory-map-shell">
         <div ref={mapContainerRef} className="trajectory-map-canvas" />
+        <p className="trajectory-map-disclaimer">
+          Cities stayed in for 1+ year
+        </p>
         <ul className="trajectory-map-legend" aria-label="Life stage legend">
           {STAGES.map((stage) => (
             <li key={stage.id}>
