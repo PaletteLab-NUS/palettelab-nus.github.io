@@ -4,7 +4,7 @@ Source for the [Palette Lab](https://palettelab-nus.github.io/) site. Content li
 
 ## Updating the site
 
-Step-by-step guides (preferred):
+Step-by-step guides:
 
 - **[Updating People](https://github.com/PaletteLab-NUS/palettelab-nus.github.io/wiki/Updating-People)** — headshots, roles, trajectory map
 - **[Updating Publications](https://github.com/PaletteLab-NUS/palettelab-nus.github.io/wiki/Updating-Publications)** — papers, thumbnails, author links

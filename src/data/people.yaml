@@ -51,6 +51,12 @@
   bio: |
     <p>I am interested in supporting creativity and learning with AI</p>
   trajectory:
+    - label: "Kulsary"
+      loc: "46°57'15.5\"N 53°59'07.8\"E"
+      note: "Hometown"
+    - label: "Atyrau"
+      loc: "47°06'02.5\"N 51°55'32.9\"E"
+      note: "High school, @AtyrauBIL"
     - label: "Daejeon"
       loc: "36°22'27.5\"N 127°21'56.3\"E"
       note: "B.S., M.S., Ph.D., @KAIST, @KIXLAB"
@@ -59,13 +65,7 @@
       note: "Ph.D., @Palette Lab"
     - label: "Seattle"
       loc: "47°38'53.8\"N 122°20'54.5\"W"
-      note: "intern, @Adobe"
-    - label: "Atyrau"
-      loc: "47°06'02.5\"N 51°55'32.9\"E"
-      note: "high school, @AtyrauBIL"
-    - label: "Kulsary"
-      loc: "46°57'15.5\"N 53°59'07.8\"E"
-      note: "hometown"
+      note: "Intern, @Adobe"
  
 "Izabella Rodrigues":
   name: "Izabella (Bella) Rodrigues"
