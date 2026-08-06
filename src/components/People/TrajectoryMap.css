@@ -1,0 +1,304 @@
+.trajectory-map-section {
+  margin-top: 20px;
+}
+
+.trajectory-map-embedded {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+}
+
+.trajectory-map-embedded .trajectory-map-shell {
+  height: 100%;
+  min-height: 420px;
+}
+
+.trajectory-map-embedded .trajectory-map-canvas {
+  height: 100%;
+  min-height: 420px;
+}
+
+.trajectory-map-subtitle {
+  color: rgba(255, 255, 255, 0.65);
+  margin: -24px 0 24px;
+  font-size: 0.98em;
+}
+
+.trajectory-map-shell {
+  position: relative;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  /* border: 1px solid rgba(161, 153, 241, 0.25);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+  background: #2c1f52; */
+}
+
+.trajectory-map-canvas {
+  width: 100%;
+  height: min(520px, 62vh);
+  min-height: 360px;
+}
+
+/* Dark-styled Mapbox zoom control */
+.trajectory-map-shell .mapboxgl-ctrl-group {
+  border: 1px solid rgba(161, 153, 241, 0.35);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+
+.trajectory-map-shell .mapboxgl-ctrl-group button {
+  width: 24px;
+  height: 24px;
+  background-color: rgba(121, 120, 214, 0.28);
+}
+
+.trajectory-map-shell .mapboxgl-ctrl-icon {
+  background-color: transparent;
+}
+
+.trajectory-map-shell .mapboxgl-ctrl-zoom-in .mapboxgl-ctrl-icon,
+.trajectory-map-shell .mapboxgl-ctrl-zoom-out .mapboxgl-ctrl-icon {
+  background-image: none;
+  position: relative;
+}
+
+.trajectory-map-shell .mapboxgl-ctrl-zoom-in .mapboxgl-ctrl-icon::before,
+.trajectory-map-shell .mapboxgl-ctrl-zoom-in .mapboxgl-ctrl-icon::after,
+.trajectory-map-shell .mapboxgl-ctrl-zoom-out .mapboxgl-ctrl-icon::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #6716c8;
+  border-radius: 1px;
+}
+
+.trajectory-map-shell .mapboxgl-ctrl-zoom-in .mapboxgl-ctrl-icon::before,
+.trajectory-map-shell .mapboxgl-ctrl-zoom-out .mapboxgl-ctrl-icon::before {
+  width: 12px;
+  height: 2px;
+}
+
+.trajectory-map-shell .mapboxgl-ctrl-zoom-in .mapboxgl-ctrl-icon::after {
+  width: 2px;
+  height: 12px;
+}
+
+
+.trajectory-pie-marker {
+  position: relative;
+  line-height: 0;
+  pointer-events: none;
+  z-index: 1;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.4));
+}
+
+.trajectory-pie-marker.is-active {
+  z-index: 2;
+  filter: drop-shadow(0 0 0 1.5px rgba(255, 255, 255, 0.55))
+    drop-shadow(0 2px 4px rgba(0, 0, 0, 0.45));
+}
+
+.trajectory-pie-marker--hub {
+  z-index: 3;
+}
+
+.trajectory-pie-glow {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 180%;
+  height: 180%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(
+    circle,
+    rgba(121, 120, 214, 0.45) 0%,
+    rgba(121, 120, 214, 0.18) 40%,
+    rgba(121, 120, 214, 0) 70%
+  );
+  animation: trajectory-hub-pulse 2.4s ease-out infinite;
+}
+
+.trajectory-pie-glow--delay {
+  animation-delay: 1.2s;
+  width: 220%;
+  height: 220%;
+  background: radial-gradient(
+    circle,
+    rgba(192, 189, 241, 0.35) 0%,
+    rgba(121, 120, 214, 0.12) 45%,
+    rgba(121, 120, 214, 0) 72%
+  );
+}
+
+@keyframes trajectory-hub-pulse {
+  0% {
+    opacity: 0.85;
+    transform: translate(-50%, -50%) scale(0.72);
+  }
+  70% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.15);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.15);
+  }
+}
+
+.trajectory-pie-marker svg {
+  position: relative;
+  display: block;
+  overflow: visible;
+  z-index: 1;
+}
+
+/* Hover tooltips stay non-interactive; sticky (clicked) ones can scroll. */
+.trajectory-popup {
+  pointer-events: none;
+  z-index: 4 !important;
+}
+
+.trajectory-popup.trajectory-popup--sticky {
+  pointer-events: auto;
+}
+
+.trajectory-map-legend {
+  position: absolute;
+  left: 12px;
+  bottom: 28px;
+  z-index: 2;
+  margin: 0;
+  padding: 10px 12px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-radius: 10px;
+  background: rgba(20, 16, 36, 0.88);
+  border: 1px solid rgba(161, 153, 241, 0.28);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.78rem;
+  line-height: 1.2;
+  pointer-events: none;
+}
+
+.trajectory-map-legend li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.trajectory-map-legend-swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.35);
+}
+
+.trajectory-map-missing-token {
+  padding: 28px 24px;
+  border-radius: 16px;
+  border: 1px dashed rgba(161, 153, 241, 0.45);
+  color: rgba(255, 255, 255, 0.75);
+  background: rgba(49, 48, 73, 0.35);
+}
+
+.trajectory-map-missing-token code {
+  color: #c0bdf1;
+}
+
+.trajectory-popup .mapboxgl-popup-content {
+  background: rgba(28, 26, 42, 0.96);
+  color: #f5f3ff;
+  border-radius: 10px;
+  padding: 10px 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(161, 153, 241, 0.3);
+}
+
+.trajectory-popup .mapboxgl-popup-tip {
+  border-top-color: rgba(28, 26, 42, 0.96);
+}
+
+.trajectory-popup-city {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.trajectory-popup-person-only {
+  display: block;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.trajectory-popup-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.trajectory-popup--sticky .trajectory-popup-list {
+  max-height: min(260px, 42vh);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-right: 4px;
+}
+
+.trajectory-popup--sticky .trajectory-popup-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.trajectory-popup--sticky .trajectory-popup-list::-webkit-scrollbar-thumb {
+  background: rgba(161, 153, 241, 0.45);
+  border-radius: 999px;
+}
+
+.trajectory-popup-list li {
+  font-size: 0.85rem;
+  line-height: 1.35;
+}
+
+.trajectory-popup-person {
+  display: block;
+  font-weight: 600;
+  color: #e8e4ff;
+}
+
+.trajectory-popup-note {
+  display: block;
+  color: rgba(255, 255, 255, 0.65);
+  margin-top: 1px;
+}
+
+@media (max-width: 767px) {
+  .trajectory-map-canvas {
+    height: 340px;
+    min-height: 280px;
+  }
+
+  .trajectory-map-embedded,
+  .trajectory-map-embedded .trajectory-map-shell,
+  .trajectory-map-embedded .trajectory-map-canvas {
+    min-height: 320px;
+  }
+
+  .trajectory-map-legend {
+    left: 8px;
+    bottom: 24px;
+    padding: 8px 10px;
+    font-size: 0.72rem;
+  }
+}

@@ -23,6 +23,102 @@
   align-items: start;
 }
 
+.trajectory-hero-layout {
+  --trajectory-hero-height: 420px;
+  display: grid;
+  grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
+  gap: 28px;
+  /* Keep map height fixed; intro/bio below the card can grow freely. */
+  align-items: start;
+}
+
+.trajectory-focus-panel {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.trajectory-focus-card {
+  width: 100%;
+  height: var(--trajectory-hero-height);
+  display: flex;
+  flex-direction: column;
+  animation: trajectory-focus-in 280ms ease;
+}
+
+.trajectory-focus-card > .team-card-link,
+.trajectory-focus-card .team-card-flip,
+.trajectory-focus-card .team-card-inner,
+.trajectory-focus-card .team-card-front,
+.trajectory-focus-card .team-card-small {
+  height: 100%;
+  min-height: 0;
+}
+
+.trajectory-focus-card .team-card-small {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Photo fills leftover space; name/role intro stays content-sized. */
+.trajectory-focus-card .team-card-image-small {
+  flex: 1 1 auto;
+  height: auto;
+  min-height: 0;
+}
+
+.trajectory-focus-card .team-card-body-small {
+  flex: 0 0 auto;
+}
+
+@keyframes trajectory-focus-in {
+  from {
+    opacity: 0.35;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.trajectory-focus-bio {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.92em;
+  line-height: 1.65;
+  max-height: 220px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.trajectory-focus-bio p {
+  margin-bottom: 1em;
+}
+
+.trajectory-focus-bio p:last-child {
+  margin-bottom: 0;
+}
+
+.trajectory-focus-bio a {
+  color: #a199f1;
+  text-decoration: underline;
+}
+
+.trajectory-focus-bio a:hover {
+  color: #fff;
+}
+
+.trajectory-hero-map {
+  min-width: 0;
+  height: var(--trajectory-hero-height);
+}
+
+.trajectory-hero-map .trajectory-map-embedded,
+.trajectory-hero-map .trajectory-map-shell,
+.trajectory-hero-map .trajectory-map-canvas {
+  height: 100% !important;
+  min-height: 0 !important;
+}
+
 .director-card-item {
   width: 100%;
   min-width: 0;
@@ -231,7 +327,8 @@
     font-size: 1.8em;
   }
 
-  .director-layout {
+  .director-layout,
+  .trajectory-hero-layout {
     grid-template-columns: 1fr;
     gap: 24px;
   }
@@ -240,9 +337,25 @@
     display: none;
   }
 
-  .director-card-item {
+  .trajectory-focus-bio {
+    max-height: none;
+  }
+
+  .director-card-item,
+  .trajectory-focus-card {
     max-width: 320px;
     justify-self: center;
+    margin: 0 auto;
+    height: auto;
+  }
+
+  .trajectory-focus-card .team-card-image-small {
+    flex: none;
+    height: 280px;
+  }
+
+  .trajectory-hero-map {
+    height: 340px;
   }
 }
 

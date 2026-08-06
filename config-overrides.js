@@ -1,4 +1,5 @@
 module.exports = function override(config) {
+  // Prevent webpack from rewriting Mapbox's shared main/worker scope.
   config.optimization.concatenateModules = false;
 
   config.module.rules = [

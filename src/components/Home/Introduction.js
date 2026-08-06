@@ -5,7 +5,9 @@ import homeLogo from "../../assets/palette-logo-480.webp";
 import homeLogo_blue from "../../assets/palette-logo-480-blue-test.png";
 import homeLogo_green from "../../assets/palette-logo-480-green-test.png";
 import homeLogo_pink from "../../assets/palette-logo-480-pink-test.png";
-
+// import homeLogo_lite from "../../assets/palette-logo-lite.webp";
+// import homeLogo_basic from "../../assets/palette-logo-basic.webp";
+// import homeLogo_skin from "../../assets/palette-logo-skin.webp";
 function Introduction() {
   return (
     <Container fluid className="home-about-section" id="about">
