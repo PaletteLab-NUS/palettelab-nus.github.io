@@ -248,6 +248,14 @@
   margin-top: 1px;
 }
 
+.trajectory-popup-privacy {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
 .trajectory-map-title-box,
 .trajectory-map-legend-box {
   position: absolute;

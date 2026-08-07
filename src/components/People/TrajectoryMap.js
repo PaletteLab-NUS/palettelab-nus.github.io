@@ -563,6 +563,47 @@ export function buildTrajectoryFeatures(members) {
   };
 }
 
+/** Decorative privacy node — not a real city, excluded from legend / fit bounds. */
+const PRIVACY_NODE = {
+  id: "privacy-retained",
+  label: "Location Privacy Retained",
+  // South Pacific (Pacific-centered lng) — clear of trajectory nodes.
+  coords: [198, -14],
+  tooltip:
+    "All trajectories shown are shared with the consent of each lab member. Locations may be omitted upon request.",
+};
+
+function createPrivacyIconImage() {
+  const r = 8;
+  const size = Math.ceil(r * 2 + 4);
+  const cx = size / 2;
+  const cy = size / 2;
+  const canvas = document.createElement("canvas");
+  canvas.width = size;
+  canvas.height = size;
+  const ctx = canvas.getContext("2d");
+
+  ctx.beginPath();
+  ctx.arc(cx, cy, r, 0, Math.PI * 2);
+  ctx.fillStyle = "#8a8a8a";
+  ctx.fill();
+  ctx.strokeStyle = "rgba(255,255,255,0.55)";
+  ctx.lineWidth = 1.25;
+  ctx.stroke();
+
+  return {
+    id: "privacy-node",
+    image: ctx.getImageData(0, 0, size, size),
+    size,
+  };
+}
+
+function privacyPopupHtml() {
+  return `<p class="trajectory-popup-privacy">${escapeHtml(
+    PRIVACY_NODE.tooltip
+  )}</p>`;
+}
+
 /** Pixel radius for pie icons (map symbol layer, not HTML markers). */
 function pieRadius(peopleCount) {
   const n = Math.max(1, peopleCount);
@@ -787,26 +828,52 @@ function TrajectoryMap({
       // (HTML Marker.setLngLat wraps to ±180 and drifts onto the wrong world copy).
       const pointHitCollection = {
         type: "FeatureCollection",
-        features: points.features.map((feature, index) => {
-          const { label, count, stageCounts, affiliations } = feature.properties;
-          const icon = createPieIconImage(stageCounts, count);
-          if (!map.hasImage(icon.id)) {
-            map.addImage(icon.id, icon.image, { pixelRatio: 1 });
-          }
-          return {
-            type: "Feature",
-            properties: {
-              id: index,
-              label,
-              count,
-              icon: icon.id,
-              iconSize: icon.size,
-              isHub: String(label || "").trim().toLowerCase() === "singapore",
-              affiliations: JSON.stringify(affiliations || []),
-            },
-            geometry: feature.geometry,
-          };
-        }),
+        features: [
+          ...points.features.map((feature, index) => {
+            const { label, count, stageCounts, affiliations } = feature.properties;
+            const icon = createPieIconImage(stageCounts, count);
+            if (!map.hasImage(icon.id)) {
+              map.addImage(icon.id, icon.image, { pixelRatio: 1 });
+            }
+            return {
+              type: "Feature",
+              properties: {
+                id: index,
+                label,
+                count,
+                icon: icon.id,
+                iconSize: icon.size,
+                isHub: String(label || "").trim().toLowerCase() === "singapore",
+                kind: "city",
+                affiliations: JSON.stringify(affiliations || []),
+              },
+              geometry: feature.geometry,
+            };
+          }),
+          (() => {
+            const icon = createPrivacyIconImage();
+            if (!map.hasImage(icon.id)) {
+              map.addImage(icon.id, icon.image, { pixelRatio: 1 });
+            }
+            return {
+              type: "Feature",
+              properties: {
+                id: points.features.length,
+                label: PRIVACY_NODE.label,
+                count: 0,
+                icon: icon.id,
+                iconSize: icon.size,
+                isHub: false,
+                kind: "privacy",
+                affiliations: "[]",
+              },
+              geometry: {
+                type: "Point",
+                coordinates: PRIVACY_NODE.coords,
+              },
+            };
+          })(),
+        ],
       };
       map.addSource("trajectory-points", {
         type: "geojson",
@@ -913,6 +980,28 @@ function TrajectoryMap({
           "icon-allow-overlap": true,
           "icon-ignore-placement": true,
           "symbol-sort-key": ["get", "count"],
+        },
+      });
+
+      map.addLayer({
+        id: "trajectory-privacy-label",
+        type: "symbol",
+        source: "trajectory-points",
+        filter: ["==", ["get", "kind"], "privacy"],
+        layout: {
+          "text-field": ["get", "label"],
+          "text-size": 11,
+          "text-font": ["DIN Pro Medium", "Arial Unicode MS Regular"],
+          "text-offset": [0, 1.35],
+          "text-anchor": "top",
+          "text-max-width": 10,
+          "text-allow-overlap": true,
+          "text-ignore-placement": true,
+        },
+        paint: {
+          "text-color": "#b4b4b4",
+          "text-halo-color": "rgba(0,0,0,0.75)",
+          "text-halo-width": 1.2,
         },
       });
 
@@ -1149,16 +1238,24 @@ function TrajectoryMap({
         activeCityId = id;
         if (sticky) stickyCityId = id;
 
-        let affiliations = [];
-        try {
-          affiliations = JSON.parse(feature.properties.affiliations || "[]");
-        } catch (_) {
-          affiliations = [];
-        }
+        const isPrivacy = feature.properties.kind === "privacy";
 
         map.getCanvas().style.cursor = "pointer";
         setPopupLngLat(feature.geometry.coordinates);
-        popup.setHTML(cityPopupHtml(feature.properties.label, affiliations)).addTo(map);
+
+        if (isPrivacy) {
+          popup.setHTML(privacyPopupHtml()).addTo(map);
+        } else {
+          let affiliations = [];
+          try {
+            affiliations = JSON.parse(feature.properties.affiliations || "[]");
+          } catch (_) {
+            affiliations = [];
+          }
+          popup
+            .setHTML(cityPopupHtml(feature.properties.label, affiliations))
+            .addTo(map);
+        }
         setPopupSticky(sticky);
 
         if (sticky) {
@@ -1171,10 +1268,11 @@ function TrajectoryMap({
         }
       };
 
-      if (points.features.length > 0) {
+      const cityPointsForBounds = points.features;
+      if (cityPointsForBounds.length > 0) {
         // Don't use LngLatBounds/fitBounds — they wrap lng into ±180 and break
         // the Pacific-centered camera relative to unwrapped GeoJSON features.
-        const pacificBounds = points.features.reduce((b, f) => {
+        const pacificBounds = cityPointsForBounds.reduce((b, f) => {
           const c = f.geometry.coordinates;
           if (!b) return { minLng: c[0], maxLng: c[0], minLat: c[1], maxLat: c[1] };
           return {
