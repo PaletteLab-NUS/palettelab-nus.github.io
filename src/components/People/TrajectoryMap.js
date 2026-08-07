@@ -33,7 +33,7 @@ export const STAGES = [
   { id: "bachelor", label: "Bachelor", color: "#8FCB6D" },
   { id: "master", label: "Master / Work", color: "#5BC0EB" },
   { id: "phd", label: "Ph.D.+", color: "#a199f1" },
-  { id: "intern", label: "Intern", color: "#F06292" },
+  { id: "intern", label: "Visiting", color: "#F06292" },
 ];
 
 const STAGE_IDS = STAGES.map((s) => s.id);
@@ -47,7 +47,7 @@ const MASTER_RE =
   /\b(?:m\.?\s*s\.?\s*e\.?|m\.?\s*sc\.?|m\.?\s*s\.?|m\.?\s*a\.?|m\.?\s*eng\.?|master'?s?|mba)\b/i;
 /** Full-time jobs (research, industry, etc.) share the master pie slice. */
 const WORK_RE =
-  /\b(?:researchers?|research\s+(?:assistant|associate|scientist|engineer|fellow)|scientists?|engineers?|software\s+engineer|full[\s-]?time|industry|employee|worked\s+(?:at|as)|job)\b/i;
+  /\b(?:researchers?|research\s+(?:assistant|associate|scientist|engineer|fellow)|scientists?|engineers?|software\s+engineer|full[\s-]?time|industry|employee|works?|worked\s+(?:at|as)|job)\b/i;
 const BACHELOR_RE =
   /\b(?:b\.?\s*s\.?\s*e\.?|b\.?\s*sc\.?|b\.?\s*s\.?|b\.?\s*e\.?|b\.?\s*a\.?|b\.?\s*eng\.?|bachelor'?s?|undergrad(?:uate)?)\b/i;
 const INTERN_RE = /\b(?:intern(?:ship)?s?)\b/i;
@@ -759,9 +759,14 @@ function TrajectoryMap({
       pitchWithRotate: false,
       touchPitch: false,
       renderWorldCopies: true,
-      attributionControl: true,
+      attributionControl: false,
+      logoPosition: "bottom-right",
     });
 
+    map.addControl(
+      new mapboxgl.AttributionControl({ compact: true }),
+      "bottom-right"
+    );
     map.addControl(
       new mapboxgl.NavigationControl({ showCompass: false, visualizePitch: false }),
       "top-right"
@@ -1187,7 +1192,7 @@ function TrajectoryMap({
             Math.max(1.35, Math.log2(360 / Math.max(lngSpan, latSpan * 1.6)) + 0.85)
           );
           map.easeTo({
-            center: [180, (pacificBounds.minLat + pacificBounds.maxLat) / 2],
+            center: [166, (pacificBounds.minLat + pacificBounds.maxLat) / 2],
             zoom,
             duration: 800,
           });
@@ -1377,20 +1382,22 @@ function TrajectoryMap({
       {!embedded && <h2 className="section-title">Where We&apos;re From</h2>}
       <div className="trajectory-map-shell">
         <div ref={mapContainerRef} className="trajectory-map-canvas" />
-        <p className="trajectory-map-disclaimer">
-          Cities stayed in for 1+ year
-        </p>
-        <ul className="trajectory-map-legend" aria-label="Life stage legend">
-          {STAGES.map((stage) => (
-            <li key={stage.id}>
-              <span
-                className="trajectory-map-legend-swatch"
-                style={{ background: stage.color }}
-              />
-              {stage.label}
-            </li>
-          ))}
-        </ul>
+        <div className="trajectory-map-title-box">
+          Cities we stayed in for 1+ years
+        </div>
+        <div className="trajectory-map-legend-box">
+          <ul className="trajectory-map-legend" aria-label="Life stage legend">
+            {[...STAGES].reverse().map((stage) => (
+              <li key={stage.id}>
+                <span
+                  className="trajectory-map-legend-swatch"
+                  style={{ background: stage.color }}
+                />
+                {stage.label}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
