@@ -1,0 +1,31 @@
+{
+  "siteUrl": "https://palettelab-nus.github.io",
+  "siteName": "Palette Lab",
+  "defaultImage": "https://palettelab-nus.github.io/palette-logo-480.webp",
+  "routes": [
+    {
+      "path": "/",
+      "title": "Palette Lab | NUS",
+      "description": "Palette Lab at the National University of Singapore researches computational tools that support creativity, accessibility, education, healthcare, and sustainability.",
+      "bodyClass": "bg-home"
+    },
+    {
+      "path": "/people",
+      "title": "Team | Palette Lab · NUS",
+      "description": "Meet the faculty, researchers, students, and collaborators of Palette Lab at the National University of Singapore.",
+      "bodyClass": "bg-people"
+    },
+    {
+      "path": "/publications",
+      "title": "Publications | Palette Lab · NUS",
+      "description": "Research publications from Palette Lab at NUS on human–computer interaction and computational creativity support tools.",
+      "bodyClass": "bg-publications"
+    },
+    {
+      "path": "/memories",
+      "title": "Memories | Palette Lab · NUS",
+      "description": "Events, milestones, and lab life highlights from Palette Lab at the National University of Singapore.",
+      "bodyClass": "bg-memories"
+    }
+  ]
+}

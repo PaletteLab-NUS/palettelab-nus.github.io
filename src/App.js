@@ -17,44 +17,54 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
 import "./App.css";
 import NotFound from "./components/NotFound/NotFound";
+import seo from "./seo.json";
 
-const PAGE_META = {
-  "/": {
-    title: "Palette Lab | NUS",
-    description: "Website of NUS Palette Lab",
-    bodyClass: "bg-home",
-  },
-  "/people": {
-    title: "Team | Palette Lab",
-    description: "Meet the researchers, students, and collaborators of NUS Palette Lab.",
-    bodyClass: "bg-people",
-  },
-  "/publications": {
-    title: "Pub | Palette Lab",
-    description: "Explore research publications from NUS Palette Lab.",
-    bodyClass: "bg-publications",
-  },
-  "/memories": {
-    title: "Memories | Palette Lab",
-    description: "Browse highlights and memories from NUS Palette Lab.",
-    bodyClass: "bg-memories",
-  },
-};
+const PAGE_META = Object.fromEntries(
+  seo.routes.map((route) => [
+    route.path,
+    {
+      title: route.title,
+      description: route.description,
+      bodyClass: route.bodyClass,
+      canonical: route.path === "/" ? `${seo.siteUrl}/` : `${seo.siteUrl}${route.path}`,
+    },
+  ])
+);
+
+function upsertLinkRel(rel, href) {
+  let link = document.querySelector(`link[rel="${rel}"]`);
+  if (!link) {
+    link = document.createElement("link");
+    link.setAttribute("rel", rel);
+    document.head.appendChild(link);
+  }
+  link.setAttribute("href", href);
+}
+
+function setMetaBySelector(selector, content) {
+  const el = document.querySelector(selector);
+  if (el) el.setAttribute("content", content);
+}
 
 function AppContent() {
   const location = useLocation();
 
   useEffect(() => {
     const normalizedPath = location.pathname.replace(/\/+$/, "") || "/";
-    const { title, description, bodyClass } =
+    const { title, description, bodyClass, canonical } =
       PAGE_META[normalizedPath] ?? PAGE_META["/"];
     const body = document.body;
-    const descriptionMeta = document.querySelector('meta[name="description"]');
 
     document.title = title;
-    if (descriptionMeta) {
-      descriptionMeta.setAttribute("content", description);
-    }
+    setMetaBySelector('meta[name="description"]', description);
+    setMetaBySelector('meta[itemprop="description"]', description);
+    setMetaBySelector('meta[property="og:title"]', title);
+    setMetaBySelector('meta[property="og:description"]', description);
+    setMetaBySelector('meta[property="og:url"]', canonical);
+    setMetaBySelector('meta[name="twitter:title"]', title);
+    setMetaBySelector('meta[name="twitter:description"]', description);
+    upsertLinkRel("canonical", canonical);
+
     body.classList.remove(
       "bg-home",
       "bg-people",

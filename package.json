@@ -38,6 +38,7 @@
     "start": "react-app-rewired start",
     "prebuild": "npm run sync:mapbox-worker",
     "build": "react-app-rewired build",
+    "postbuild": "node scripts/apply-seo.js",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "test": "react-scripts test",
