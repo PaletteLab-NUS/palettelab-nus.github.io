@@ -399,11 +399,11 @@ function trajectoryLineColor(member) {
 
 /**
  * Cropped circle for local-only members.
- * The circle sits in the ocean; its circumference (外圈) passes through
- * the Singapore node center (圆心). We stroke ~7/8 of that rim so it
- * reads as a cropped circle tied to the hub.
+ * Same radius for everyone; the circumference still passes through the
+ * city node. Variation is heading (ocean sector west/SW of the hub) and
+ * crop-sweep direction, so two rings at Singapore don't stack.
  */
-function buildRingLine(center, { personId } = {}) {
+function buildRingLine(center, { personId, peerIndex = 0, peerCount = 1 } = {}) {
   const [lng, lat] = toPacificCoords(center);
   const key = String(personId || "");
   let hash = 0;
@@ -411,16 +411,28 @@ function buildRingLine(center, { personId } = {}) {
     hash = (hash + key.charCodeAt(i) * (i + 1)) % 11;
   }
 
-  // Center in the ocean WSW of the hub. |center→hub| = radius, so the
-  // outer ring passes exactly through Singapore's center.
-  const heading = Math.PI + Math.PI / 8 + ((hash - 5) / 11) * 0.12;
-  const radius = 8.8 + (hash % 3) * 0.25;
+  // |center→hub| = radius, so the outer ring passes through the city.
+  const radius = 8.8;
+  // WSW into the Indian Ocean; ~66° fan keeps rings apart without
+  // swinging north into Malaysia.
+  const baseHeading = Math.PI + Math.PI / 6;
+  const headingSpan = 1.15;
+  let heading;
+  if (peerCount > 1) {
+    const t = peerIndex / (peerCount - 1);
+    heading = baseHeading - headingSpan / 2 + t * headingSpan;
+  } else {
+    heading = baseHeading + ((hash - 5) / 11) * headingSpan;
+  }
+
   const cx = lng + Math.cos(heading) * radius;
   const cy = lat + Math.sin(heading) * radius;
   const cityAngle = Math.atan2(lat - cy, lng - cx);
 
-  // ~7/8 turn along the rim (cropped, not a 3/4 wedge).
-  const sweep = Math.PI * 2 * (7 / 8);
+  // ~7/8 turn along the rim; flip direction so stacked hub rings
+  // crop on opposite sides.
+  const sweepDir = (peerCount > 1 ? peerIndex : hash) % 2 === 0 ? 1 : -1;
+  const sweep = Math.PI * 2 * (7 / 8) * sweepDir;
   const steps = 96;
   const coords = [];
   for (let i = 0; i <= steps; i += 1) {
@@ -430,6 +442,21 @@ function buildRingLine(center, { personId } = {}) {
   // Close the crop back to the hub center.
   coords.push([lng, lat]);
   return coords;
+}
+
+/** Stable order of local-only people per city, so hub rings can fan out. */
+function buildLocalRingLanes(membersWithStops) {
+  const ringLanes = new Map();
+  membersWithStops.forEach(({ member, stops }) => {
+    if (stops.length !== 1) return;
+    const personId = String(member.id);
+    const key = cityKey(stops[0].label, stops[0].coords);
+    if (!ringLanes.has(key)) ringLanes.set(key, []);
+    const peers = ringLanes.get(key);
+    if (!peers.includes(personId)) peers.push(personId);
+  });
+  ringLanes.forEach((peers) => peers.sort());
+  return ringLanes;
 }
 
 /**
@@ -478,6 +505,7 @@ export function buildTrajectoryFeatures(members) {
   });
 
   const edgeLanes = buildEdgeLanes(membersWithStops);
+  const ringLanes = buildLocalRingLanes(membersWithStops);
 
   membersWithStops.forEach(({ member, stops }) => {
     stops.forEach((stop) => {
@@ -528,6 +556,9 @@ export function buildTrajectoryFeatures(members) {
     } else if (stops.length === 1) {
       // Local-only members still get a visible orbit around their city.
       const personId = String(member.id);
+      const city = cityKey(stops[0].label, stops[0].coords);
+      const peers = ringLanes.get(city) || [personId];
+      const peerIndex = Math.max(0, peers.indexOf(personId));
       lines.push({
         type: "Feature",
         properties: {
@@ -537,7 +568,11 @@ export function buildTrajectoryFeatures(members) {
         },
         geometry: {
           type: "LineString",
-          coordinates: buildRingLine(stops[0].coords, { personId }),
+          coordinates: buildRingLine(stops[0].coords, {
+            personId,
+            peerIndex,
+            peerCount: peers.length,
+          }),
         },
       });
     }
