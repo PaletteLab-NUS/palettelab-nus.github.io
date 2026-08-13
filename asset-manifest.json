@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.e16c5158.css",
-    "main.js": "/static/js/main.0dc57adb.js",
+    "main.js": "/static/js/main.1369f4da.js",
     "static/js/533.d84b46ff.chunk.js": "/static/js/533.d84b46ff.chunk.js",
     "static/media/2026-lab-window.JPG": "/static/media/2026-lab-window.91aa5e11f0b4b4c2b963.JPG",
     "static/media/2026-lab-final.JPG": "/static/media/2026-lab-final.ba63e99bbc323f326afe.JPG",
@@ -12,6 +12,7 @@
     "static/media/bg-2.png": "/static/media/bg-2.8a68f102e1be76fe5b4e.png",
     "static/media/bella.webp": "/static/media/bella.23f107e8cdfd3ea34711.webp",
     "static/media/2026-lab-gabriella.JPG": "/static/media/2026-lab-gabriella.34b3a730f6f46c5457ca.JPG",
+    "static/media/colinhia.jpeg": "/static/media/colinhia.9255ab6efc32846b71de.jpeg",
     "static/media/2026-she_speaks_science_feature.jpeg": "/static/media/2026-she_speaks_science_feature.7ba418720e6e93949694.jpeg",
     "static/media/2026-she_speaks_science.jpeg": "/static/media/2026-she_speaks_science.f293510d89d1f7d82de0.jpeg",
     "static/media/jiayu.jpg": "/static/media/jiayu.bbe33650d3c673cded8d.jpg",
@@ -40,11 +41,11 @@
     "index.html": "/index.html",
     "static/media/bluesky-brands-solid-full.svg": "/static/media/bluesky-brands-solid-full.7f35bfd3a810e72328e7cfabe5a513d2.svg",
     "main.e16c5158.css.map": "/static/css/main.e16c5158.css.map",
-    "main.0dc57adb.js.map": "/static/js/main.0dc57adb.js.map",
+    "main.1369f4da.js.map": "/static/js/main.1369f4da.js.map",
     "533.d84b46ff.chunk.js.map": "/static/js/533.d84b46ff.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e16c5158.css",
-    "static/js/main.0dc57adb.js"
+    "static/js/main.1369f4da.js"
   ]
 }
