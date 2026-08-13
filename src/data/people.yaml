@@ -390,3 +390,22 @@
   website: "https://hollysong.site/"
   category: "friends"
   image: "tianqi.jpg"
+
+"Colin Hia":
+  name: "Colin Hia Qingxuan"
+  description: "FYP student • NUS undergrad"
+  category: "labMember"
+  image: "colinhia.jpeg"
+  color: "#a8bcdd"
+  textColor: "#ff949b"
+  interests: 
+    - "Knitting"
+    - "Guitar"
+    - "Pokemon"
+  trajectory:
+    - label: "Singapore"
+      loc: "1°17'41.0\"N 103°46'31.4\"E"
+      note: "Hometown, Undergrad @NUS"
+    - label: "Montreal"
+      loc: "45°30'14.76\"N -73°34'28.92\"W"
+      note: "Undergrad Exchange @McGill"
