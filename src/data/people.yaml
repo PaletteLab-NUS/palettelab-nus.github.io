@@ -66,6 +66,9 @@
     - label: "Singapore"
       loc: "1°17'41.0\"N 103°46'31.4\"E"
       note: "Ph.D., @Palette Lab"
+    # - label: "Seattle"  # redacted as shorter than 1 year
+    #   loc: "47°38'53.8\"N 122°20'54.5\"W"
+    #   note: "intern, @Adobe"
  
 "Izabella Rodrigues":
   name: "Izabella (Bella) Rodrigues"
@@ -362,6 +365,26 @@
     - label: "Singapore"
       loc: "1°17'41.0\"N 103°46'31.4\"E"
       note: "Intern @Palette Lab"
+
+"Colin Hia":
+  name: "Colin Hia Qingxuan"
+  description: "FYP student • NUS undergrad"
+  category: "labMember"
+  image: "colinhia.jpeg"
+  color: "#a8bcdd"
+  textColor: "#EEEEEE"
+  interests: 
+    - "Knitting"
+    - "Guitar"
+    - "Pokemon"
+  trajectory:
+    - label: "Singapore"
+      loc: "1°17'41.0\"N 103°46'31.4\"E"
+      note: "Hometown, Undergrad @NUS"
+    # - label: "Montreal"  # redacted as shorter than 1 year
+    #   loc: "45°30'14.76\"N 73°34'28.92\"W"
+    #   note: "Undergrad Exchange @McGill"
+
  
 "Mingyi Li":
   name: "Mingyi Li"
@@ -390,22 +413,3 @@
   website: "https://hollysong.site/"
   category: "friends"
   image: "tianqi.jpg"
-
-"Colin Hia":
-  name: "Colin Hia Qingxuan"
-  description: "FYP student • NUS undergrad"
-  category: "labMember"
-  image: "colinhia.jpeg"
-  color: "#a8bcdd"
-  textColor: "#ff949b"
-  interests: 
-    - "Knitting"
-    - "Guitar"
-    - "Pokemon"
-  trajectory:
-    - label: "Singapore"
-      loc: "1°17'41.0\"N 103°46'31.4\"E"
-      note: "Hometown, Undergrad @NUS"
-    - label: "Montreal"
-      loc: "45°30'14.76\"N -73°34'28.92\"W"
-      note: "Undergrad Exchange @McGill"

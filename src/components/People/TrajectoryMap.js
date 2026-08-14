@@ -165,12 +165,13 @@ export function parseDmsLocation(loc) {
   if (!loc || typeof loc !== "string") return null;
 
   const pattern =
-    /(\d+)[°]\s*(\d+)['′]\s*([\d.]+)["″]?\s*([NS])\s+(\d+)[°]\s*(\d+)['′]\s*([\d.]+)["″]?\s*([EW])/i;
+    /(-?\d+)[°]\s*(\d+)['′]\s*([\d.]+)["″]?\s*([NS])\s+(-?\d+)[°]\s*(\d+)['′]\s*([\d.]+)["″]?\s*([EW])/i;
   const match = loc.trim().match(pattern);
   if (!match) return null;
 
   const toDecimal = (deg, min, sec, hemi) => {
-    let value = Number(deg) + Number(min) / 60 + Number(sec) / 3600;
+    // Hemisphere is the source of truth; a leading minus (e.g. -73°W) is ignored.
+    let value = Math.abs(Number(deg)) + Number(min) / 60 + Number(sec) / 3600;
     if (hemi === "S" || hemi === "W") value *= -1;
     return value;
   };
@@ -479,6 +480,48 @@ function buildEdgeLanes(membersWithStops) {
   return edgeLanes;
 }
 
+/** Decorative privacy node — not a real city, excluded from legend / fit bounds. */
+export const PRIVACY_NODE = {
+  id: "privacy-retained",
+  label: "Location Privacy Retained",
+  // South Pacific (Pacific-centered lng) — clear of trajectory nodes.
+  coords: [198, -14],
+  tooltip:
+    "All trajectories shown are shared with the consent of each lab member. Locations may be omitted upon request.",
+};
+
+function geographicFromPacific([lng, lat]) {
+  let gLng = lng;
+  while (gLng > 180) gLng -= 360;
+  while (gLng < -180) gLng += 360;
+  return [gLng, lat];
+}
+
+function formatDms([lng, lat]) {
+  const part = (value, pos, neg) => {
+    const hemi = value >= 0 ? pos : neg;
+    const abs = Math.abs(value);
+    const deg = Math.floor(abs + 1e-9);
+    const minFloat = (abs - deg) * 60;
+    const min = Math.floor(minFloat + 1e-9);
+    const sec = Math.abs((minFloat - min) * 60);
+    return `${deg}°${String(min).padStart(2, "0")}'${sec.toFixed(1).padStart(4, "0")}"${hemi}`;
+  };
+  return `${part(lat, "N", "S")} ${part(lng, "E", "W")}`;
+}
+
+/** YAML `loc` for the privacy placeholder (matches `PRIVACY_NODE` on the map). */
+export const PRIVACY_STOP_LOC = formatDms(
+  geographicFromPacific(PRIVACY_NODE.coords)
+);
+
+export function isPrivacyStopLabel(label) {
+  return (
+    String(label || "").trim().toLowerCase() ===
+    PRIVACY_NODE.label.toLowerCase()
+  );
+}
+
 /**
  * Build city nodes (aggregated) + person trajectory lines.
  * Stop schema: { loc, label (city), note (personal detail) }
@@ -490,6 +533,16 @@ export function buildTrajectoryFeatures(members) {
   const membersWithStops = members.map((member) => {
     const stops = (member.trajectory || [])
       .map((stop, index) => {
+        if (isPrivacyStopLabel(stop.label)) {
+          return {
+            label: PRIVACY_NODE.label,
+            note: stop.note || "",
+            loc: stop.loc || PRIVACY_STOP_LOC,
+            coords: geographicFromPacific(PRIVACY_NODE.coords),
+            index,
+            privacy: true,
+          };
+        }
         const coords = parseDmsLocation(stop.loc);
         if (!coords) return null;
         return {
@@ -509,6 +562,7 @@ export function buildTrajectoryFeatures(members) {
 
   membersWithStops.forEach(({ member, stops }) => {
     stops.forEach((stop) => {
+      if (stop.privacy) return;
       const key = cityKey(stop.label, stop.coords);
       const stages = classifyStages(stop.note, member);
       if (!cities.has(key)) {
@@ -597,16 +651,6 @@ export function buildTrajectoryFeatures(members) {
     lines: { type: "FeatureCollection", features: lines },
   };
 }
-
-/** Decorative privacy node — not a real city, excluded from legend / fit bounds. */
-const PRIVACY_NODE = {
-  id: "privacy-retained",
-  label: "Location Privacy Retained",
-  // South Pacific (Pacific-centered lng) — clear of trajectory nodes.
-  coords: [198, -14],
-  tooltip:
-    "All trajectories shown are shared with the consent of each lab member. Locations may be omitted upon request.",
-};
 
 function createPrivacyIconImage() {
   const r = 8;

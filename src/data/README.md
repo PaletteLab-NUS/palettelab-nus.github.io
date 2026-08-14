@@ -68,13 +68,25 @@ Top-level **map** keyed by a stable person id (usually the canonical full name).
 
 ### `trajectory[]` stops
 
-Used by `TrajectoryMap`. Life-stage pie slices are **inferred from `note` text** (and fall back to `description` / `category`).
+Used by `TrajectoryMap`. Include **cities you stayed in for more than one year** (same rule as the map caption). Life-stage pie slices are **inferred from `note` text** (and fall back to `description` / `category`).
+
+Location sharing is optional. Omit any stop you do not want public, or use the privacy placeholder below instead of a real city.
 
 | Field | Required | Type | Notes |
 | --- | --- | --- | --- |
 | `label` | yes | string | City / place name shown on the map |
-| `loc` | yes | DMS string | Format: `1°17'41.0"N 103°46'31.4"E` (N/S then E/W). Invalid → stop skipped |
+| `loc` | yes\* | DMS string | Format: `1°17'41.0"N 103°46'31.4"E` (N/S then E/W). Invalid → stop skipped. \*May be omitted when `label` is the privacy placeholder |
 | `note` | yes\* | string | Personal detail in popups; keywords drive stages (\*empty → role fallback) |
+
+**Privacy placeholder** (maps to the gray South Pacific node; not a city pie):
+
+```yaml
+    - label: "Location Privacy Retained"
+      loc: "14°00'00.0\"S 162°00'00.0\"W"
+      note: "Omitted"
+```
+
+Use that exact `label` (from `PRIVACY_NODE` in `TrajectoryMap.js`). `loc` is filled in if you leave it out.
 
 Keywords recognized in `note` (case-insensitive; multi-label OK):
 
