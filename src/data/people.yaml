@@ -270,6 +270,9 @@
     - "Sailing"
     - "Photography"
   trajectory:
+    - label: "Wenzhou"
+      loc: "27°59'56.0\"N 120°42'00.0\"E"
+      note: "Born"
     - label: "Shanghai"
       loc: "31°13'49.0\"N 121°28'25.0\"E"
       note: "Hometown"
