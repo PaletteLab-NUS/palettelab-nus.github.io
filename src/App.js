@@ -56,6 +56,7 @@ function AppContent() {
     const body = document.body;
 
     document.title = title;
+    setMetaBySelector('meta[name="application-name"]', title);
     setMetaBySelector('meta[name="description"]', description);
     setMetaBySelector('meta[itemprop="description"]', description);
     setMetaBySelector('meta[property="og:title"]', title);
