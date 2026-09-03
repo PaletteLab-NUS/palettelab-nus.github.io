@@ -47,6 +47,7 @@ Top-level **map** keyed by a stable person id (usually the canonical full name).
 | `id` | no | string \| number | Overrides map key; used for React keys / map focus |
 | `name` | no | string | Display name; falls back to map key |
 | `description` | no | string | Role line under the name (e.g. `PhD`, `intern • UW undergrad`) |
+| `duration` | no | string | Marks the person as alumni and is shown on their card. Alumni appear in the Alumni grid and are hidden from the map until “Show alumni” is checked |
 | `website` | no | url | Card link target |
 | `category` | **yes** | enum | Entries without `category` are dropped |
 | `image` | yes\* | string | Filename under `src/assets/team/` (\*missing → console warn) |
@@ -65,6 +66,10 @@ Top-level **map** keyed by a stable person id (usually the canonical full name).
 | `labMember` | “Lab Members” grid (flip cards) + map |
 | `friends` | “Friends of the Lab” grid (simple link cards, no flip / no trajectory expected) |
 | `future` | Not listed on People; still treated as a lab author on Publications |
+
+`duration` takes precedence over the category for People-page grouping. Keep the
+person's existing category so card behavior and Publications author styling
+continue to work.
 
 ### `trajectory[]` stops
 

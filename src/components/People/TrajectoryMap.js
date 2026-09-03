@@ -839,6 +839,9 @@ function TrajectoryMap({
   pinnedPersonId = null,
   onPersonHover,
   onPersonPin,
+  showAlumni = false,
+  onShowAlumniChange,
+  hasAlumni = false,
 }) {
   const mapContainerRef = useRef(null);
   const mapRef = useRef(null);
@@ -1504,7 +1507,7 @@ function TrajectoryMap({
       map.remove();
       mapRef.current = null;
     };
-  }, []);
+  }, [members]);
 
   // Keep line highlight in sync when React pin state changes.
   useEffect(() => {
@@ -1560,7 +1563,21 @@ function TrajectoryMap({
       <div className="trajectory-map-shell">
         <div ref={mapContainerRef} className="trajectory-map-canvas" />
         <div className="trajectory-map-title-box">
-          Cities we stayed in for 1+ years
+          <span className="trajectory-map-title-text">
+            Cities we stayed in for 1+ years
+          </span>
+          {hasAlumni && (
+            <label className="trajectory-map-alumni-toggle">
+              <input
+                type="checkbox"
+                checked={showAlumni}
+                onChange={(event) =>
+                  onShowAlumniChange?.(event.target.checked)
+                }
+              />
+              Show alumni
+            </label>
+          )}
         </div>
         <div className="trajectory-map-legend-box">
           <ul className="trajectory-map-legend" aria-label="Life stage legend">

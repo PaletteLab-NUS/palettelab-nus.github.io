@@ -18,6 +18,7 @@ function toTeamMembers(authors) {
       category: author.category,
       url: author.website,
       bio: author.bio || "",
+      duration: author.duration || "",
       hiringNote: author.hiringNote || "",
       color: author.color || "#7978D6",
       textColor: author.textColor || "#FFFFFF",
@@ -64,6 +65,9 @@ function renderCardFront(member, imageSrc) {
         <p className="team-role-small">
           <span className="purple">{member.role}</span>
         </p>
+        {member.duration && (
+          <p className="team-duration-small">{member.duration}</p>
+        )}
         {member.description && (
           <p className="team-description-small">{member.description}</p>
         )}
@@ -124,8 +128,21 @@ function renderTeamCard(member) {
 function People() {
   const teamMembers = useMemo(() => toTeamMembers(peopleData), []);
   const professors = teamMembers.filter((m) => m.category === "professor");
-  const labMembers = teamMembers.filter((m) => m.category === "labMember");
-  const collaborators = teamMembers.filter((m) => m.category === "friends");
+  const alumni = teamMembers.filter((m) => m.duration);
+  const labMembers = teamMembers.filter(
+    (m) => m.category === "labMember" && !m.duration
+  );
+  const collaborators = teamMembers.filter(
+    (m) => m.category === "friends" && !m.duration
+  );
+  const [showAlumniOnMap, setShowAlumniOnMap] = useState(false);
+  const mapMembers = useMemo(
+    () =>
+      showAlumniOnMap
+        ? teamMembers
+        : teamMembers.filter((member) => !member.duration),
+    [showAlumniOnMap, teamMembers]
+  );
 
   const defaultFocusId = professors[0] ? String(professors[0].id) : null;
   const [hoveredPersonId, setHoveredPersonId] = useState(null);
@@ -134,18 +151,21 @@ function People() {
   const focusedMember =
     teamMembers.find((m) => String(m.id) === String(focusId)) || professors[0];
 
-  const renderSection = (title, members) => {
-    let sectionTitle;
-    const lowerTitle = title.toLowerCase();
-    if (lowerTitle.includes("lab member")) {
-      sectionTitle = <>Lab Members</>;
-    } else {
-      sectionTitle = <>Friends of the Lab :)</>;
+  const handleShowAlumniChange = (showAlumni) => {
+    setShowAlumniOnMap(showAlumni);
+    if (!showAlumni) {
+      setHoveredPersonId(null);
+      const pinnedMember = teamMembers.find(
+        (member) => String(member.id) === String(pinnedPersonId)
+      );
+      if (pinnedMember?.duration) setPinnedPersonId(null);
     }
+  };
 
+  const renderSection = (title, members) => {
     return (
       <div className="team-section">
-        <h2 className="section-title">{sectionTitle}</h2>
+        <h2 className="section-title">{title}</h2>
         <div className="team-row">
           {members.map((member) => (
             <div key={member.id} className="team-card-item">
@@ -189,22 +209,26 @@ function People() {
               </div>
               <div className="trajectory-hero-map">
                 <TrajectoryMap
-                  members={teamMembers}
+                  members={mapMembers}
                   embedded
                   pinnedPersonId={pinnedPersonId}
                   onPersonHover={setHoveredPersonId}
                   onPersonPin={setPinnedPersonId}
+                  showAlumni={showAlumniOnMap}
+                  onShowAlumniChange={handleShowAlumniChange}
+                  hasAlumni={alumni.length > 0}
                 />
               </div>
             </div>
           </div>
 
           {renderSection("Lab Members", labMembers)}
-          {renderSection("Friends of the Lab", collaborators)}
+          {alumni.length > 0 && renderSection("Alumni", alumni)}
+          {renderSection("Friends of the Lab :)", collaborators)}
          
           <div className="team-section">
         <h2 className="section-title">Join Us</h2>
-        <p>We are actively looking for students and interns to join the Palette Lab. Please fill <a href="https://forms.gle/jhtwNwt2NDhZsEZS9" target="_blank" className="purple">this form</a>.</p>
+        <p>If you are interested in joining the Palette Lab, please fill out <a href="https://forms.gle/jhtwNwt2NDhZsEZS9" target="_blank" rel="noreferrer" className="purple">this form</a>.</p>
       </div>
          
            

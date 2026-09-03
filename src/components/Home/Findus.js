@@ -15,27 +15,23 @@ function Findus() {
       <Row style={{ paddingTop: "50px", paddingBottom: "80px" }}>
         <Col md={12} className="home-about-social">
           <h1>
-            <a
-              href="https://forms.gle/jhtwNwt2NDhZsEZS9"
-              target="_blank"
-              rel="noreferrer"
-              className="findus-link"
-            >
+            
               Get <span className="purple">In Touch</span>
-            </a>
+      
           </h1>
           <div className="findus-body">
             <span>
-              We are{" "}
+              If you are interested in joining the lab, please fill out {" "}
               <a
                 href="https://forms.gle/jhtwNwt2NDhZsEZS9"
                 target="_blank"
                 rel="noreferrer"
                 className="findus-link"
+                style={{ cursor: "pointer" }}
               >
-                <span className="purple">recruiting PhD students</span>
-              </a>{" "}
-              to join the lab!
+                <span className="purple" style={{ cursor: "pointer" }}>this form</span>
+              </a>.
+              
             </span>
             {/* <a
               href="https://forms.gle/jhtwNwt2NDhZsEZS9"

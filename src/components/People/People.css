@@ -304,6 +304,12 @@
   font-weight: 500;
 }
 
+.team-duration-small {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85em;
+  margin: -4px 0 10px;
+}
+
 .team-description-small {
   color: rgba(255, 255, 255, 0.75);
   font-size: 0.9em;
