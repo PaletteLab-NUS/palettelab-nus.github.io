@@ -225,6 +225,25 @@
     - label: "Singapore"
       loc: "1°17'41.0\"N 103°46'31.4\"E"
       note: "Ph.D. @Palette Lab"
+
+"Minyoung Park":
+  name: "Minyoung Park"
+  description: "PhD"
+  category: "labMember"
+  image: "minyoung.jpeg"
+  color: "#E797B5"
+  textColor: "#C4E1C0"
+  interests:
+    - "Human-Centered AI"
+    - "AI in Education"
+    - "Cats"
+  trajectory:
+    - label: "Seoul"
+      loc: "37°33'59.0\"N 126°58'41.0\"E"
+      note: "Hometown, B.S. & M.S. @SeoulTech"
+    - label: "Singapore"
+      loc: "1°17'41.0\"N 103°46'31.4\"E"
+      note: "Ph.D. @Palette Lab" 
  
 "Liwenhan Xie":
   name: "Liwenhan (Shelly) Xie"
