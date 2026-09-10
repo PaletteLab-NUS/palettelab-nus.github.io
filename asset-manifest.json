@@ -1,8 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.a04e37f5.css",
-    "main.js": "/static/js/main.64846476.js",
+    "main.js": "/static/js/main.c072e6e5.js",
     "static/js/533.d84b46ff.chunk.js": "/static/js/533.d84b46ff.chunk.js",
+    "static/media/minyoung.jpg": "/static/media/minyoung.220a2ecfae61f9ca44f6.jpg",
     "static/media/2026-lab-window.JPG": "/static/media/2026-lab-window.91aa5e11f0b4b4c2b963.JPG",
     "static/media/2026-lab-final.JPG": "/static/media/2026-lab-final.ba63e99bbc323f326afe.JPG",
     "static/media/mingyi.jpg": "/static/media/mingyi.f8b0ccf07faa4e48c740.jpg",
@@ -16,7 +17,6 @@
     "static/media/2026-she_speaks_science_feature.jpeg": "/static/media/2026-she_speaks_science_feature.7ba418720e6e93949694.jpeg",
     "static/media/2026-she_speaks_science.jpeg": "/static/media/2026-she_speaks_science.f293510d89d1f7d82de0.jpeg",
     "static/media/jiayu.jpg": "/static/media/jiayu.bbe33650d3c673cded8d.jpg",
-    "static/media/minyoung.jpeg": "/static/media/minyoung.7bcf29a8d7516c323a28.jpeg",
     "static/media/tianqi.jpg": "/static/media/tianqi.f33fd97e4c8f8f42ffc6.jpg",
     "static/media/jin.jpg": "/static/media/jin.2bc4b8f174c509c6d574.jpg",
     "static/media/2026-jingyi-talk-1.JPG": "/static/media/2026-jingyi-talk-1.5712689d4d624ea6d686.JPG",
@@ -42,11 +42,11 @@
     "index.html": "/index.html",
     "static/media/bluesky-brands-solid-full.svg": "/static/media/bluesky-brands-solid-full.7f35bfd3a810e72328e7cfabe5a513d2.svg",
     "main.a04e37f5.css.map": "/static/css/main.a04e37f5.css.map",
-    "main.64846476.js.map": "/static/js/main.64846476.js.map",
+    "main.c072e6e5.js.map": "/static/js/main.c072e6e5.js.map",
     "533.d84b46ff.chunk.js.map": "/static/js/533.d84b46ff.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a04e37f5.css",
-    "static/js/main.64846476.js"
+    "static/js/main.c072e6e5.js"
   ]
 }
