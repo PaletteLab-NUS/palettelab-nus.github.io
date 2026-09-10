@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.a04e37f5.css",
-    "main.js": "/static/js/main.c072e6e5.js",
+    "main.js": "/static/js/main.78d7a72d.js",
     "static/js/533.d84b46ff.chunk.js": "/static/js/533.d84b46ff.chunk.js",
     "static/media/minyoung.jpg": "/static/media/minyoung.220a2ecfae61f9ca44f6.jpg",
     "static/media/2026-lab-window.JPG": "/static/media/2026-lab-window.91aa5e11f0b4b4c2b963.JPG",
@@ -42,11 +42,11 @@
     "index.html": "/index.html",
     "static/media/bluesky-brands-solid-full.svg": "/static/media/bluesky-brands-solid-full.7f35bfd3a810e72328e7cfabe5a513d2.svg",
     "main.a04e37f5.css.map": "/static/css/main.a04e37f5.css.map",
-    "main.c072e6e5.js.map": "/static/js/main.c072e6e5.js.map",
+    "main.78d7a72d.js.map": "/static/js/main.78d7a72d.js.map",
     "533.d84b46ff.chunk.js.map": "/static/js/533.d84b46ff.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a04e37f5.css",
-    "static/js/main.c072e6e5.js"
+    "static/js/main.78d7a72d.js"
   ]
 }
