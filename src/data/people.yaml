@@ -36,6 +36,55 @@
     - label: "Singapore"
       loc: "1°17'41.0\"N 103°46'31.4\"E"
       note: "PI @Palette Lab"
+
+"Kevin Lam":
+  name: "Kevin Lam"
+  description: "PhD"
+  website: "https://lamfuyuan.com/"
+  category: "labMember"
+  image: "kevin.jpeg"
+  color: "#000000"
+  textColor: "#537eb5"
+  interests:
+    - "Creativity Support Tools"
+    - "Education"
+    - "Mental Health"
+    - "Dance"
+    - "Hiking"
+    - "Writing"
+  trajectory:
+    - label: "Singapore"
+      loc: "1°17'41.0\"N 103°46'31.4\"E"
+      note: "Hometown, B.S. & M.S. @NUS, Ph.D. @Palette Lab"
+ 
+"Romrawin Chumpu":
+  name: "Romrawin (Jin) Chumpu"
+  description: "PhD coadvised with Fayao Liu"
+  website: "https://romrawinjp.github.io/"
+  category: "labMember"
+  image: "jinbu.jpg"
+  color: "#CCCCFF"
+  textColor: "linear-gradient(to right, #C3B1E1, #191970)"
+  interests:
+    - "Art"
+    - "Mathematics"
+  trajectory:
+    - label: "Chiang Mai"
+      loc: "18°47'18.0\"N 98°59'07.0\"E"
+      note: "Hometown"
+    - label: "Pathum Thani"
+      loc: "14°04'08.2\"N 100°36'27.7\"E"
+      note: "B.S. & M.S. @SIIT"
+    - label: "Waterloo"
+      loc: "43°28'33.0\"N 80°25'03.0\"W"
+      note: "B.S. Exchange @UWaterloo"
+    - label: "Rayong"
+      loc: "13°41'20.0\"N 100°32'00.0\"E"
+      note: "Researcher @VISTEC"
+    - label: "Singapore"
+      loc: "1°17'41.0\"N 103°46'31.4\"E"
+      note: "Ph.D. @Palette Lab"
+       
  
 "Bekzat Tilekbay":
   name: "Bekzat Tilekbay"
@@ -129,61 +178,13 @@
     - label: "Singapore"
       loc: "1°17'41.0\"N 103°46'31.4\"E"
       note: "Ph.D. @Palette Lab"
- 
-"Kevin Lam":
-  name: "Kevin Lam"
-  description: "PhD"
-  website: "https://lamfuyuan.com/"
-  category: "labMember"
-  image: "kevin.jpeg"
-  color: "#000000"
-  textColor: "#537eb5"
-  interests:
-    - "Creativity Support Tools"
-    - "Education"
-    - "Mental Health"
-    - "Dance"
-    - "Hiking"
-    - "Writing"
-  trajectory:
-    - label: "Singapore"
-      loc: "1°17'41.0\"N 103°46'31.4\"E"
-      note: "Hometown, B.S. & M.S. @NUS, Ph.D. @Palette Lab"
- 
-"Romrawin Chumpu":
-  name: "Romrawin (Jin) Chumpu"
-  description: "PhD coadvised with Fayao Liu"
-  website: "https://romrawinjp.github.io/"
-  category: "labMember"
-  image: "jin.jpg"
-  color: "#CCCCFF"
-  textColor: "linear-gradient(to right, #C3B1E1, #191970)"
-  interests:
-    - "Art"
-    - "Mathematics"
-  trajectory:
-    - label: "Chiang Mai"
-      loc: "18°47'18.0\"N 98°59'07.0\"E"
-      note: "Hometown"
-    - label: "Pathum Thani"
-      loc: "14°04'08.2\"N 100°36'27.7\"E"
-      note: "B.S. & M.S. @SIIT"
-    - label: "Waterloo"
-      loc: "43°28'33.0\"N 80°25'03.0\"W"
-      note: "B.S. Exchange @UWaterloo"
-    - label: "Rayong"
-      loc: "13°41'20.0\"N 100°32'00.0\"E"
-      note: "Researcher @VISTEC"
-    - label: "Singapore"
-      loc: "1°17'41.0\"N 103°46'31.4\"E"
-      note: "Ph.D. @Palette Lab"
- 
+
 "Xiyuan Wang":
   name: "Xiyuan Wang"
   description: "PhD"
   website: "https://horanny.github.io/"
   category: "labMember"
-  image: "xiyuan.jpg"
+  image: "xiyuan.png"
   color: "#FEFCEF"
   textColor: "#FA6CA6"
   interests:
@@ -250,7 +251,7 @@
   description: "postdoc"
   website: "https://shellywhen.github.io/"
   category: "labMember"
-  image: "shelly.jpg"
+  image: "shelly2.jpg"
   color: "#173aa5"
   textColor: "linear-gradient(to left, #8a4af7, #d447ab)"
   interests:
@@ -273,34 +274,27 @@
     - label: "Singapore"
       loc: "1°17'41.0\"N 103°46'31.4\"E"
       note: "Postdoc @Palette Lab"
- 
-"Sixing Tao":
-  name: "Sixing (Jonathan) Tao"
-  description: "intern • UW undergrad"
-  website: "https://sixingtao.site/"
+
+
+"Colin Hia":
+  name: "Colin Hia Qingxuan"
+  description: "FYP student • NUS undergrad"
   category: "labMember"
-  image: "sixing.webp"
-  color: "#B8F500"
-  textColor: "#EF428C"
-  interests:
-    - "Creativity"
-    - "Accessibility"
-    - "Traveling"
-    - "Sailing"
-    - "Photography"
+  image: "colinhia.jpeg"
+  color: "#a8bcdd"
+  textColor: "#EEEEEE"
+  interests: 
+    - "Knitting"
+    - "Guitar"
+    - "Pokemon"
   trajectory:
-    - label: "Wenzhou"
-      loc: "27°59'56.0\"N 120°42'00.0\"E"
-      note: "Born"
-    - label: "Shanghai"
-      loc: "31°13'49.0\"N 121°28'25.0\"E"
-      note: "Hometown"
-    - label: "Seattle"
-      loc: "47°39'19.0\"N 122°18'13.0\"W"
-      note: "Undergrad @UW"
     - label: "Singapore"
       loc: "1°17'41.0\"N 103°46'31.4\"E"
-      note: "Intern @Palette Lab"
+      note: "Hometown, Undergrad @NUS"
+    # - label: "Montreal"  # redacted as shorter than 1 year
+    #   loc: "45°30'14.76\"N 73°34'28.92\"W"
+    #   note: "Undergrad Exchange @McGill"
+      
  
 "Gabriella Ugwonali":
   name: "Gabriella Ugwonali"
@@ -325,6 +319,64 @@
     - label: "Stanford"
       loc: "37°25'39.0\"N 122°10'11.0\"W"
       note: "Undergrad @Stanford"
+    - label: "Singapore"
+      loc: "1°17'41.0\"N 103°46'31.4\"E"
+      note: "Intern @Palette Lab"
+ 
+"Fuling Sun":
+  name: "Fuling Sun"
+  description: "intern • UCSD PhD advised by Haijun Xia"
+  website: "https://fulingsun.me/"
+  category: "labMember"
+  image: "fuling.jpeg"
+  duration: "Jun - Sep 2026"
+  color: "#69A297"
+  textColor: "#FFBE0B"
+  interests:
+    - "Movie"
+    - "Napping"
+  trajectory:
+    - label: "Jieyang"
+      loc: "23°32'40.4\"N 116°21'49.0\"E"
+      note: "Hometown"
+    - label: "Chengdu"
+      loc: "31°04'18.0\"N 104°06'43.0\"E"
+      note: "B.E. @UESTC"
+    - label: "Shanghai"
+      loc: "31°13'49.0\"N 121°28'25.0\"E"
+      note: "M.S. @Tongji"
+    - label: "San Diego"
+      loc: "32°52'48.0\"N 117°14'02.0\"W"
+      note: "Ph.D. @UCSD"
+    - label: "Singapore"
+      loc: "1°17'41.0\"N 103°46'31.4\"E"
+      note: "Intern @Palette Lab"
+
+"Sixing Tao":
+  name: "Sixing (Jonathan) Tao"
+  description: "intern • UW undergrad"
+  website: "https://sixingtao.site/"
+  category: "labMember"
+  duration: "Jun - Sep 2026"
+  image: "sixing.webp"
+  color: "#B8F500"
+  textColor: "#EF428C"
+  interests:
+    - "Creativity"
+    - "Accessibility"
+    - "Traveling"
+    - "Sailing"
+    - "Photography"
+  trajectory:
+    - label: "Wenzhou"
+      loc: "27°59'56.0\"N 120°42'00.0\"E"
+      note: "Born"
+    - label: "Shanghai"
+      loc: "31°13'49.0\"N 121°28'25.0\"E"
+      note: "Hometown"
+    - label: "Seattle"
+      loc: "47°39'19.0\"N 122°18'13.0\"W"
+      note: "Undergrad @UW"
     - label: "Singapore"
       loc: "1°17'41.0\"N 103°46'31.4\"E"
       note: "Intern @Palette Lab"
@@ -361,55 +413,7 @@
     - label: "Singapore"
       loc: "1°17'41.0\"N 103°46'31.4\"E"
       note: "Intern @Palette Lab"
- 
-"Fuling Sun":
-  name: "Fuling Sun"
-  description: "intern • UCSD PhD advised by Haijun Xia"
-  website: "https://fulingsun.me/"
-  category: "labMember"
-  image: "fuling.jpeg"
-  color: "#69A297"
-  textColor: "#FFBE0B"
-  interests:
-    - "Movie"
-    - "Napping"
-  trajectory:
-    - label: "Jieyang"
-      loc: "23°32'40.4\"N 116°21'49.0\"E"
-      note: "Hometown"
-    - label: "Chengdu"
-      loc: "31°04'18.0\"N 104°06'43.0\"E"
-      note: "B.E. @UESTC"
-    - label: "Shanghai"
-      loc: "31°13'49.0\"N 121°28'25.0\"E"
-      note: "M.S. @Tongji"
-    - label: "San Diego"
-      loc: "32°52'48.0\"N 117°14'02.0\"W"
-      note: "Ph.D. @UCSD"
-    - label: "Singapore"
-      loc: "1°17'41.0\"N 103°46'31.4\"E"
-      note: "Intern @Palette Lab"
 
-"Colin Hia":
-  name: "Colin Hia Qingxuan"
-  description: "FYP student • NUS undergrad"
-  category: "labMember"
-  image: "colinhia.jpeg"
-  color: "#a8bcdd"
-  textColor: "#EEEEEE"
-  interests: 
-    - "Knitting"
-    - "Guitar"
-    - "Pokemon"
-  trajectory:
-    - label: "Singapore"
-      loc: "1°17'41.0\"N 103°46'31.4\"E"
-      note: "Hometown, Undergrad @NUS"
-    # - label: "Montreal"  # redacted as shorter than 1 year
-    #   loc: "45°30'14.76\"N 73°34'28.92\"W"
-    #   note: "Undergrad Exchange @McGill"
-
- 
 "Mingyi Li":
   name: "Mingyi Li"
   description: "past intern and long term collaborator • Northeastern PhD advised by Maitraye Das"
