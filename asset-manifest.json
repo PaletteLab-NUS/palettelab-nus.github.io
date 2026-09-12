@@ -1,8 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.a04e37f5.css",
-    "main.js": "/static/js/main.78d7a72d.js",
+    "main.css": "/static/css/main.f4bcf6ce.css",
+    "main.js": "/static/js/main.0cc3bbbf.js",
     "static/js/533.d84b46ff.chunk.js": "/static/js/533.d84b46ff.chunk.js",
+    "static/media/thuyen.jpg": "/static/media/thuyen.6d99157a9c88684e147e.jpg",
+    "static/media/xiyuan.png": "/static/media/xiyuan.7af161b1518a5f727b07.png",
     "static/media/minyoung.jpg": "/static/media/minyoung.220a2ecfae61f9ca44f6.jpg",
     "static/media/2026-lab-window.JPG": "/static/media/2026-lab-window.91aa5e11f0b4b4c2b963.JPG",
     "static/media/2026-lab-final.JPG": "/static/media/2026-lab-final.ba63e99bbc323f326afe.JPG",
@@ -23,17 +25,18 @@
     "static/media/fuling.jpeg": "/static/media/fuling.29f452e7aac82aa223b7.jpeg",
     "static/media/2026-samuel-visit.JPG": "/static/media/2026-samuel-visit.7316285c9de0fbc269a0.JPG",
     "static/media/danilo.jpeg": "/static/media/danilo.73525097c96bd1fd0a57.jpeg",
-    "static/media/thuyen.jpg": "/static/media/thuyen.063f5f8a1cfb90cf84b9.jpg",
     "static/media/2026-jingyi-visit.JPG": "/static/media/2026-jingyi-visit.02d500caba183a5cc553.JPG",
     "static/media/2026-jingyi-talk-2.JPG": "/static/media/2026-jingyi-talk-2.846fb9b12200e86c7892.JPG",
     "static/media/xiyuan.jpg": "/static/media/xiyuan.39a7210b8171a8bb8162.jpg",
     "static/media/sixing.webp": "/static/media/sixing.7f4e85b6cb541862e3fc.webp",
+    "static/media/shelly2.jpg": "/static/media/shelly2.ebb67ca8b549c0442503.jpg",
     "static/media/gabriella.jpg": "/static/media/gabriella.e43f3b7403c57f79ccf7.jpg",
     "static/media/feifeiheadshot.jpeg": "/static/media/feifeiheadshot.251716c7641a6e7841e2.jpeg",
     "static/media/palette-logo-480-blue-test.png": "/static/media/palette-logo-480-blue-test.e25568c389011bb6c5e4.png",
     "static/media/palette-logo-480-green-test.png": "/static/media/palette-logo-480-green-test.6191833c326084e2778c.png",
     "static/media/mengyi.jpeg": "/static/media/mengyi.b82338bdb90b4124a22a.jpeg",
     "static/media/palette-logo-480-pink-test.png": "/static/media/palette-logo-480-pink-test.1aa9518409a59bbd67a1.png",
+    "static/media/jinbu.jpg": "/static/media/jinbu.ccf431d76565c2f4c366.jpg",
     "static/media/kevin.jpeg": "/static/media/kevin.aa598e8d012c1452ad44.jpeg",
     "static/media/palette-logo-480.webp": "/static/media/palette-logo-480.af98fafbe2a56ce6bfe3.webp",
     "static/media/janee_purple-480.webp": "/static/media/janee_purple-480.f8a3081de3e492c65797.webp",
@@ -41,12 +44,12 @@
     "static/media/bekzat.jpeg": "/static/media/bekzat.da73e417042819e70179.jpeg",
     "index.html": "/index.html",
     "static/media/bluesky-brands-solid-full.svg": "/static/media/bluesky-brands-solid-full.7f35bfd3a810e72328e7cfabe5a513d2.svg",
-    "main.a04e37f5.css.map": "/static/css/main.a04e37f5.css.map",
-    "main.78d7a72d.js.map": "/static/js/main.78d7a72d.js.map",
+    "main.f4bcf6ce.css.map": "/static/css/main.f4bcf6ce.css.map",
+    "main.0cc3bbbf.js.map": "/static/js/main.0cc3bbbf.js.map",
     "533.d84b46ff.chunk.js.map": "/static/js/533.d84b46ff.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a04e37f5.css",
-    "static/js/main.78d7a72d.js"
+    "static/css/main.f4bcf6ce.css",
+    "static/js/main.0cc3bbbf.js"
   ]
 }
