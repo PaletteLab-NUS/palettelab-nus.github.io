@@ -1,14 +1,28 @@
 {
   "files": {
     "main.css": "/static/css/main.f4bcf6ce.css",
-    "main.js": "/static/js/main.0cc3bbbf.js",
+    "main.js": "/static/js/main.c69b71c8.js",
     "static/js/533.d84b46ff.chunk.js": "/static/js/533.d84b46ff.chunk.js",
+    "static/media/2026-intern-hci.PNG": "/static/media/2026-intern-hci.786860aa0cc5db43beb0.PNG",
+    "static/media/2026-intern-massage.png": "/static/media/2026-intern-massage.18af8e73f279b9702bf2.png",
     "static/media/thuyen.jpg": "/static/media/thuyen.6d99157a9c88684e147e.jpg",
+    "static/media/2026-intern-card.png": "/static/media/2026-intern-card.eddd09d4b1ce47072d4e.png",
     "static/media/xiyuan.png": "/static/media/xiyuan.7af161b1518a5f727b07.png",
+    "static/media/2026-intern-campus.JPG": "/static/media/2026-intern-campus.e608ee15a779001ff231.JPG",
+    "static/media/2026-intern-farewell.png": "/static/media/2026-intern-farewell.be3fda87c42124c4daec.png",
+    "static/media/2026-summer.JPG": "/static/media/2026-summer.95e6e18d2729172fdeef.JPG",
+    "static/media/2026-intern-party.JPG": "/static/media/2026-intern-party.ed3531e8c556aeb0c58e.JPG",
+    "static/media/2026-intern-yarn.JPG": "/static/media/2026-intern-yarn.d04b1cc81b48edaa25bf.JPG",
+    "static/media/2026-intern-welcome.JPG": "/static/media/2026-intern-welcome.3e5976f9341d876794ce.JPG",
+    "static/media/2026-intern-sport.JPG": "/static/media/2026-intern-sport.78fdd8c3ff07986b27d3.JPG",
     "static/media/minyoung.jpg": "/static/media/minyoung.220a2ecfae61f9ca44f6.jpg",
     "static/media/2026-lab-window.JPG": "/static/media/2026-lab-window.91aa5e11f0b4b4c2b963.JPG",
     "static/media/2026-lab-final.JPG": "/static/media/2026-lab-final.ba63e99bbc323f326afe.JPG",
+    "static/media/2026-chi-delivery.JPG": "/static/media/2026-chi-delivery.2881e11db514cdfb9ced.JPG",
+    "static/media/2026-chi-yochi.JPG": "/static/media/2026-chi-yochi.ab0d3b90534bafde2cf9.JPG",
+    "static/media/2026-intern-national-day.JPG": "/static/media/2026-intern-national-day.3510e0d582e037d8a590.JPG",
     "static/media/mingyi.jpg": "/static/media/mingyi.f8b0ccf07faa4e48c740.jpg",
+    "static/media/2026-intern-task.JPG": "/static/media/2026-intern-task.a80dc0e0a456d0562823.JPG",
     "static/media/2026-chi-vizcrit.jpg": "/static/media/2026-chi-vizcrit.eb6ccf3bb233bae7f5b4.jpg",
     "static/media/2026-lab-cropping.JPG": "/static/media/2026-lab-cropping.b18a50778576f7809d01.JPG",
     "static/media/shelly.jpg": "/static/media/shelly.7bd3913fdf0dc77914a5.jpg",
@@ -23,6 +37,7 @@
     "static/media/jin.jpg": "/static/media/jin.2bc4b8f174c509c6d574.jpg",
     "static/media/2026-jingyi-talk-1.JPG": "/static/media/2026-jingyi-talk-1.5712689d4d624ea6d686.JPG",
     "static/media/fuling.jpeg": "/static/media/fuling.29f452e7aac82aa223b7.jpeg",
+    "static/media/2026-intern-nana.jpg": "/static/media/2026-intern-nana.dc1ffad3a6b0bd34eb80.jpg",
     "static/media/2026-samuel-visit.JPG": "/static/media/2026-samuel-visit.7316285c9de0fbc269a0.JPG",
     "static/media/danilo.jpeg": "/static/media/danilo.73525097c96bd1fd0a57.jpeg",
     "static/media/2026-jingyi-visit.JPG": "/static/media/2026-jingyi-visit.02d500caba183a5cc553.JPG",
@@ -45,11 +60,11 @@
     "index.html": "/index.html",
     "static/media/bluesky-brands-solid-full.svg": "/static/media/bluesky-brands-solid-full.7f35bfd3a810e72328e7cfabe5a513d2.svg",
     "main.f4bcf6ce.css.map": "/static/css/main.f4bcf6ce.css.map",
-    "main.0cc3bbbf.js.map": "/static/js/main.0cc3bbbf.js.map",
+    "main.c69b71c8.js.map": "/static/js/main.c69b71c8.js.map",
     "533.d84b46ff.chunk.js.map": "/static/js/533.d84b46ff.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f4bcf6ce.css",
-    "static/js/main.0cc3bbbf.js"
+    "static/js/main.c69b71c8.js"
   ]
 }
