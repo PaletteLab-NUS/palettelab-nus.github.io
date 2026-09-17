@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.f4bcf6ce.css",
-    "main.js": "/static/js/main.c69b71c8.js",
+    "main.css": "/static/css/main.80b52f57.css",
+    "main.js": "/static/js/main.b445a5bc.js",
     "static/js/533.d84b46ff.chunk.js": "/static/js/533.d84b46ff.chunk.js",
     "static/media/2026-intern-hci.PNG": "/static/media/2026-intern-hci.786860aa0cc5db43beb0.PNG",
     "static/media/2026-intern-massage.png": "/static/media/2026-intern-massage.18af8e73f279b9702bf2.png",
@@ -21,7 +21,9 @@
     "static/media/2026-chi-delivery.JPG": "/static/media/2026-chi-delivery.2881e11db514cdfb9ced.JPG",
     "static/media/2026-chi-yochi.JPG": "/static/media/2026-chi-yochi.ab0d3b90534bafde2cf9.JPG",
     "static/media/2026-intern-national-day.JPG": "/static/media/2026-intern-national-day.3510e0d582e037d8a590.JPG",
+    "static/media/2026-intern-art.JPG": "/static/media/2026-intern-art.27ac27c62a2450ec2c43.JPG",
     "static/media/mingyi.jpg": "/static/media/mingyi.f8b0ccf07faa4e48c740.jpg",
+    "static/media/2026-jingyi-talk-3.JPG": "/static/media/2026-jingyi-talk-3.1747415a31b40cc19e0d.JPG",
     "static/media/2026-intern-task.JPG": "/static/media/2026-intern-task.a80dc0e0a456d0562823.JPG",
     "static/media/2026-chi-vizcrit.jpg": "/static/media/2026-chi-vizcrit.eb6ccf3bb233bae7f5b4.jpg",
     "static/media/2026-lab-cropping.JPG": "/static/media/2026-lab-cropping.b18a50778576f7809d01.JPG",
@@ -31,6 +33,7 @@
     "static/media/2026-lab-gabriella.JPG": "/static/media/2026-lab-gabriella.34b3a730f6f46c5457ca.JPG",
     "static/media/colinhia.jpeg": "/static/media/colinhia.9255ab6efc32846b71de.jpeg",
     "static/media/2026-she_speaks_science_feature.jpeg": "/static/media/2026-she_speaks_science_feature.7ba418720e6e93949694.jpeg",
+    "static/media/2026-intern-cafe.JPG": "/static/media/2026-intern-cafe.a96cb7156ab12d9a8c63.JPG",
     "static/media/2026-she_speaks_science.jpeg": "/static/media/2026-she_speaks_science.f293510d89d1f7d82de0.jpeg",
     "static/media/jiayu.jpg": "/static/media/jiayu.bbe33650d3c673cded8d.jpg",
     "static/media/tianqi.jpg": "/static/media/tianqi.f33fd97e4c8f8f42ffc6.jpg",
@@ -59,12 +62,12 @@
     "static/media/bekzat.jpeg": "/static/media/bekzat.da73e417042819e70179.jpeg",
     "index.html": "/index.html",
     "static/media/bluesky-brands-solid-full.svg": "/static/media/bluesky-brands-solid-full.7f35bfd3a810e72328e7cfabe5a513d2.svg",
-    "main.f4bcf6ce.css.map": "/static/css/main.f4bcf6ce.css.map",
-    "main.c69b71c8.js.map": "/static/js/main.c69b71c8.js.map",
+    "main.80b52f57.css.map": "/static/css/main.80b52f57.css.map",
+    "main.b445a5bc.js.map": "/static/js/main.b445a5bc.js.map",
     "533.d84b46ff.chunk.js.map": "/static/js/533.d84b46ff.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f4bcf6ce.css",
-    "static/js/main.c69b71c8.js"
+    "static/css/main.80b52f57.css",
+    "static/js/main.b445a5bc.js"
   ]
 }
