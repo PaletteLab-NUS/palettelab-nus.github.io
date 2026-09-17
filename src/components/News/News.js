@@ -1,7 +1,9 @@
-import React, { useMemo } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import { Container } from "react-bootstrap";
 import Particle from "../Particle";
 import NewsEntry from "./NewsEntry";
+import NewsPhotoModal from "./NewsPhotoModal";
+import { buildGallery } from "./newsMedia";
 import newsItems from "../../data/news.yaml";
 import "./News.css";
 
@@ -15,6 +17,17 @@ function sortByDate(items) {
 
 function News() {
   const sortedNews = useMemo(() => sortByDate(newsItems), []);
+  const { photos, entryPhotoOffsets } = useMemo(
+    () => buildGallery(sortedNews),
+    [sortedNews]
+  );
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+
+  const openLightbox = useCallback((index) => {
+    setLightboxIndex(index);
+    setLightboxOpen(true);
+  }, []);
 
   return (
     <div className="news-page">
@@ -30,11 +43,21 @@ function News() {
               <NewsEntry
                 key={`${entry.date}-${index}`}
                 entry={entry}
+                photoOffset={entryPhotoOffsets[index]}
+                onOpenPhoto={openLightbox}
               />
             ))}
           </div>
         </Container>
       </Container>
+
+      <NewsPhotoModal
+        photos={photos}
+        index={lightboxIndex}
+        show={lightboxOpen}
+        onHide={() => setLightboxOpen(false)}
+        onNavigate={setLightboxIndex}
+      />
     </div>
   );
 }

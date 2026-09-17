@@ -1,14 +1,6 @@
-- date: "2026-09-11"
+- date: "2026-09-12"
   about: >
-    Submitted to CHI 2027! 🎉
-  photos:
-    - path: "2026-chi-yochi.JPG"
-      caption: "Enjoying Yo-CHI's yoghurt bowl to celebrate CHI submission 😉"
-    - path: "2026-chi-delivery.JPG"
-      caption: "We were working (eating?) hard before the deadline! 💪"
-- date: "2026-09-11"
-  about: >
-    Farewell to interns! We had a great summer together with Yuki, Gabriella, Jonathan, and Fuling.
+    Farewell to interns! We had a great summer together with Yuki, Gabriella, Jonathan, and Fuling 💜.
   photos:
     - path: "2026-intern-nana.jpg"
       caption: "We had a farewell party for Jonathan and Fuling at Jonathan's fav Thai restaurant!"
@@ -18,18 +10,30 @@
       caption: "Celebrating the Teachers' Day with a hand-drawn card by Jin the artist ^ ^"
     - path: "2026-intern-yarn.JPG"
       caption: "We learned to make yarn pom pom at Jane's."
+    - path: "2026-intern-party.JPG"
+      caption: "We had a great party at Jane's place!"
     - path: "2026-intern-sport.JPG"
       caption: "We worked out near VivoCity; The sunset was beautiful!"
     - path: "2026-intern-national-day.JPG"
       caption: "We watched the National Day fireworks (rehearsal) together!"
-    - path: "2026-intern-party.JPG"
-      caption: "We had a great party at Jane's place!"
-    - path: "2026-intern-massage.png"
-      caption: "Interns enjoy the privilege of a massage at the Palette Lab!"
+    - path: "2026-intern-art.JPG"
+      caption: "We visited several art galleries together."
     - path: "2026-intern-hci.PNG"
       caption: "First NUS-HCI lunch chat at Techno Edge 🎉"
-    - path: "2026-intern-campus.JPG"
-      caption: "Showing interns around NUS campus."
+    # - path: "2026-intern-campus.JPG"
+    #   caption: "First day on campus; It feels like yesterday!"
+    - path: "2026-intern-cafe.JPG"
+      caption: "We had a pleasant chat at Simple Cafe and got to know each other better!"
+- date: "2026-09-11"
+  about: >
+    Submitted to CHI 2027! 🎉
+  photos:
+    - path: "2026-chi-yochi.JPG"
+      caption: "Enjoying Yo-CHI's yoghurt bowl to celebrate CHI submission 😉"
+    - path: "2026-chi-delivery.JPG"
+      caption: "We were working (eating?) hard before the deadline! 💪"
+    - path: "2026-intern-massage.png"
+      caption: "Enjoying massages from work! 💆‍♀️"
 - date: "2026-07-24"
   about: >
     We decorated our new lab space with colorful window papercuts!
@@ -47,9 +51,9 @@
     Jingyi Li visited our lab and gave a talk on "Power, Norms, & Radical Humility: Towards Artistic Support Tools".
   photos:
     - path: "2026-jingyi-talk-1.JPG"
-      caption: "Jingyi Li is giving a talk"
+      caption: "Jingyi Li was giving a talk about artistic support tools"
     - path: "2026-jingyi-visit.JPG"
-      caption: "Jingyi Li is visiting the Palette Lab celebrating the birthday of Thuyen"
+      caption: "Jingyi also joined us to celebrate the birthday of Thuyen"
 
 - date: "2026-04-13"
   about: >

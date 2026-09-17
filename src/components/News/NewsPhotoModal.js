@@ -1,9 +1,11 @@
 import React, { useCallback, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight, FaTimes } from "react-icons/fa";
+import { formatDate } from "./newsMedia";
 
 function NewsPhotoModal({ photos, index, show, onHide, onNavigate }) {
   const photo = photos[index];
   const hasMultiple = photos.length > 1;
+  const formattedDate = formatDate(photo?.date);
 
   const goToPrevious = useCallback(() => {
     onNavigate((index - 1 + photos.length) % photos.length);
@@ -77,16 +79,19 @@ function NewsPhotoModal({ photos, index, show, onHide, onNavigate }) {
             alt={photo.caption || `Photo ${index + 1} of ${photos.length}`}
             className="news-lightbox-image"
           />
-          {photo.caption && (
-            <figcaption className="news-lightbox-caption">
-              {photo.caption}
-            </figcaption>
-          )}
-          {hasMultiple && (
-            <p className="news-lightbox-counter">
-              {index + 1} / {photos.length}
-            </p>
-          )}
+          <figcaption className="news-lightbox-meta">
+            {formattedDate && (
+              <time className="news-lightbox-date" dateTime={photo.date}>
+                {formattedDate}
+              </time>
+            )}
+            {photo.caption && (
+              <p className="news-lightbox-caption">{photo.caption}</p>
+            )}
+            {photo.about && (
+              <p className="news-lightbox-about">{photo.about}</p>
+            )}
+          </figcaption>
         </figure>
 
         {hasMultiple && (
@@ -98,6 +103,12 @@ function NewsPhotoModal({ photos, index, show, onHide, onNavigate }) {
           >
             <FaChevronRight />
           </button>
+        )}
+
+        {hasMultiple && (
+          <p className="news-lightbox-footnote" aria-live="polite">
+            {index + 1} / {photos.length}
+          </p>
         )}
       </div>
     </div>

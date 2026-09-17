@@ -150,6 +150,8 @@
   align-items: center;
   justify-content: center;
   padding: 24px;
+  overflow-x: hidden;
+  overflow-y: auto;
   background: rgba(10, 8, 20, 0.88);
   backdrop-filter: blur(4px);
 }
@@ -157,21 +159,26 @@
 .news-lightbox-content {
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: min(1100px, 100%);
-  max-height: calc(100vh - 48px);
+  max-width: 100%;
+  padding-top: 12px;
+  padding-bottom: 8px;
 }
 
 .news-lightbox-figure {
   margin: 0;
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
   text-align: center;
 }
 
 .news-lightbox-image {
   max-width: 100%;
-  max-height: calc(100vh - 160px);
+  max-height: calc(100vh - 300px);
   width: auto;
   height: auto;
   object-fit: contain;
@@ -179,17 +186,50 @@
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45);
 }
 
-.news-lightbox-caption {
+.news-lightbox-meta {
   margin-top: 14px;
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 1rem;
+  max-width: min(720px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 4px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.news-lightbox-date {
+  display: block;
+  color: #a199f1;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+
+.news-lightbox-caption {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+.news-lightbox-about {
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.95rem;
   line-height: 1.5;
 }
 
-.news-lightbox-counter {
-  margin: 8px 0 0;
-  color: rgba(255, 255, 255, 0.55);
-  font-size: 0.9rem;
+.news-lightbox-footnote {
+  width: 100%;
+  max-width: min(720px, 100%);
+  margin: 28px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid rgba(161, 153, 241, 0.28);
+  color: rgba(161, 153, 241, 0.85);
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+  text-align: center;
 }
 
 .news-lightbox-close,
@@ -198,28 +238,32 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 0;
-  color: white;
-  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(161, 153, 241, 0.55);
+  color: #fff;
+  background: rgba(161, 153, 241, 0.28);
   cursor: pointer;
-  transition: background 0.2s ease, transform 0.2s ease;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 
 .news-lightbox-close:hover,
 .news-lightbox-nav:hover,
 .news-lightbox-close:focus-visible,
 .news-lightbox-nav:focus-visible {
-  background: rgba(255, 255, 255, 0.22);
+  background: rgba(161, 153, 241, 0.48);
+  border-color: rgba(161, 153, 241, 0.85);
   outline: none;
 }
 
 .news-lightbox-close {
-  top: -12px;
-  right: 0;
-  width: 40px;
-  height: 40px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 2001;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   font-size: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
 }
 
 .news-lightbox-nav {
@@ -294,11 +338,15 @@
   }
 
   .news-lightbox-close {
-    top: 8px;
-    right: 8px;
+    top: 14px;
+    right: 14px;
   }
 
-  .news-lightbox-nav {
-    background: rgba(0, 0, 0, 0.45);
+  .news-lightbox-image {
+    max-height: calc(100vh - 340px);
+  }
+
+  .news-lightbox-meta {
+    text-align: left;
   }
 }
