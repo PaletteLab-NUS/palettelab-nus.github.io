@@ -230,6 +230,7 @@
 "Minyoung Park":
   name: "Minyoung Park"
   description: "PhD on Lab Rotation"
+  website: "https://minzer0.github.io/"
   category: "labMember"
   image: "minyoung.jpg"
   color: "#E797B5"
