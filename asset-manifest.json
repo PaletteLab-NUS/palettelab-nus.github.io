@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.80b52f57.css",
-    "main.js": "/static/js/main.b445a5bc.js",
+    "main.js": "/static/js/main.2306b2c0.js",
     "static/js/533.d84b46ff.chunk.js": "/static/js/533.d84b46ff.chunk.js",
     "static/media/2026-intern-hci.PNG": "/static/media/2026-intern-hci.786860aa0cc5db43beb0.PNG",
     "static/media/2026-intern-massage.png": "/static/media/2026-intern-massage.18af8e73f279b9702bf2.png",
@@ -63,11 +63,11 @@
     "index.html": "/index.html",
     "static/media/bluesky-brands-solid-full.svg": "/static/media/bluesky-brands-solid-full.7f35bfd3a810e72328e7cfabe5a513d2.svg",
     "main.80b52f57.css.map": "/static/css/main.80b52f57.css.map",
-    "main.b445a5bc.js.map": "/static/js/main.b445a5bc.js.map",
+    "main.2306b2c0.js.map": "/static/js/main.2306b2c0.js.map",
     "533.d84b46ff.chunk.js.map": "/static/js/533.d84b46ff.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.80b52f57.css",
-    "static/js/main.b445a5bc.js"
+    "static/js/main.2306b2c0.js"
   ]
 }
