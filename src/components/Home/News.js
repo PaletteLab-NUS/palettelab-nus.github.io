@@ -16,7 +16,7 @@ function News() {
             <div className="home-news-video">
               <iframe
                 title="Palette Lab Introduction"
-                src="https://www.youtube.com/watch?v=6AfX7b6uCaI"
+                src="https://www.youtube.com/embed/6AfX7b6uCaI?si=Xe3Nq1HV_lziuIbo"
                 allow="autoplay"
                 allowFullScreen
               />
