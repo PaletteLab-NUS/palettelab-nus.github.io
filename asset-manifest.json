@@ -1,9 +1,11 @@
 {
   "files": {
     "main.css": "/static/css/main.80b52f57.css",
-    "main.js": "/static/js/main.2306b2c0.js",
+    "main.js": "/static/js/main.57b11fd5.js",
     "static/js/533.d84b46ff.chunk.js": "/static/js/533.d84b46ff.chunk.js",
     "static/media/2026-intern-hci.PNG": "/static/media/2026-intern-hci.786860aa0cc5db43beb0.PNG",
+    "static/media/2026-ssi-jinpu-talk.jpg": "/static/media/2026-ssi-jinpu-talk.18fa5423feb1d425abc9.jpg",
+    "static/media/2026-ssi-xiyuan.jpg": "/static/media/2026-ssi-xiyuan.79e45752bc35810f369b.jpg",
     "static/media/2026-intern-massage.png": "/static/media/2026-intern-massage.18af8e73f279b9702bf2.png",
     "static/media/thuyen.jpg": "/static/media/thuyen.6d99157a9c88684e147e.jpg",
     "static/media/2026-intern-card.png": "/static/media/2026-intern-card.eddd09d4b1ce47072d4e.png",
@@ -18,15 +20,21 @@
     "static/media/minyoung.jpg": "/static/media/minyoung.220a2ecfae61f9ca44f6.jpg",
     "static/media/2026-lab-window.JPG": "/static/media/2026-lab-window.91aa5e11f0b4b4c2b963.JPG",
     "static/media/2026-lab-final.JPG": "/static/media/2026-lab-final.ba63e99bbc323f326afe.JPG",
+    "static/media/2026-ssi-tv.JPG": "/static/media/2026-ssi-tv.fafe3f875d798b44cd00.JPG",
     "static/media/2026-chi-delivery.JPG": "/static/media/2026-chi-delivery.2881e11db514cdfb9ced.JPG",
     "static/media/2026-chi-yochi.JPG": "/static/media/2026-chi-yochi.ab0d3b90534bafde2cf9.JPG",
+    "static/media/2026-ssi-prepare.JPG": "/static/media/2026-ssi-prepare.5d08b1ab11b27c787e65.JPG",
+    "static/media/2026-ssi-jinpu.jpg": "/static/media/2026-ssi-jinpu.1ce906413d5cd3c9326e.jpg",
+    "static/media/2026-ssi-games.jpg": "/static/media/2026-ssi-games.b4c1055fde030d87e36c.jpg",
     "static/media/2026-intern-national-day.JPG": "/static/media/2026-intern-national-day.3510e0d582e037d8a590.JPG",
     "static/media/2026-intern-art.JPG": "/static/media/2026-intern-art.27ac27c62a2450ec2c43.JPG",
     "static/media/mingyi.jpg": "/static/media/mingyi.f8b0ccf07faa4e48c740.jpg",
+    "static/media/2026-ssi-food.JPG": "/static/media/2026-ssi-food.c9b8888a88a4ceefe1d5.JPG",
     "static/media/2026-jingyi-talk-3.JPG": "/static/media/2026-jingyi-talk-3.1747415a31b40cc19e0d.JPG",
     "static/media/2026-intern-task.JPG": "/static/media/2026-intern-task.a80dc0e0a456d0562823.JPG",
     "static/media/2026-chi-vizcrit.jpg": "/static/media/2026-chi-vizcrit.eb6ccf3bb233bae7f5b4.jpg",
     "static/media/2026-lab-cropping.JPG": "/static/media/2026-lab-cropping.b18a50778576f7809d01.JPG",
+    "static/media/2026-ssi-chope.jpg": "/static/media/2026-ssi-chope.cd45ad4819a423d41d5b.jpg",
     "static/media/shelly.jpg": "/static/media/shelly.7bd3913fdf0dc77914a5.jpg",
     "static/media/bg-2.png": "/static/media/bg-2.8a68f102e1be76fe5b4e.png",
     "static/media/bella.webp": "/static/media/bella.23f107e8cdfd3ea34711.webp",
@@ -63,11 +71,11 @@
     "index.html": "/index.html",
     "static/media/bluesky-brands-solid-full.svg": "/static/media/bluesky-brands-solid-full.7f35bfd3a810e72328e7cfabe5a513d2.svg",
     "main.80b52f57.css.map": "/static/css/main.80b52f57.css.map",
-    "main.2306b2c0.js.map": "/static/js/main.2306b2c0.js.map",
+    "main.57b11fd5.js.map": "/static/js/main.57b11fd5.js.map",
     "533.d84b46ff.chunk.js.map": "/static/js/533.d84b46ff.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.80b52f57.css",
-    "static/js/main.2306b2c0.js"
+    "static/js/main.57b11fd5.js"
   ]
 }
