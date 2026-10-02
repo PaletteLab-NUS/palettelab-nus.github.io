@@ -2,15 +2,15 @@
   about: >
     We presented our recent work at the Smart System Institute Gather-up and showed our demos!
   photo:
-    - path: "2026-ssi-tv.JPG"
+    - path: "2026-ssi-tv.png"
       caption: "A map of where to go in the event."
     # - path: "2026-ssi-prepare.JPG"
     #   caption: "We set up the device and tested the game demo in advance."
-    - path: "2026-ssi-xiyuan.jpg"
+    - path: "2026-ssi-xiyuan.png"
       caption: "Xiyuan presented her project on game customization."
     - path: "2026-ssi-chope.jpg"
       caption: "Jinpu presented her project demo in physics simulation."
-    - path: "2026-ssi-games.jpg"
+    - path: "2026-ssi-games.png"
       caption: "Xiyuan showed her game demo in our lab space."
     - path: "2026-ssi-food.JPG"
       caption: "We enjoyed the food and drinks at the event."
