@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.80b52f57.css",
-    "main.js": "/static/js/main.f9901353.js",
+    "main.js": "/static/js/main.44d438d0.js",
     "static/js/533.d84b46ff.chunk.js": "/static/js/533.d84b46ff.chunk.js",
     "static/media/2026-intern-hci.PNG": "/static/media/2026-intern-hci.786860aa0cc5db43beb0.PNG",
     "static/media/2026-ssi-games.png": "/static/media/2026-ssi-games.bdb2bd75671a39dea4e3.png",
@@ -70,11 +70,11 @@
     "index.html": "/index.html",
     "static/media/bluesky-brands-solid-full.svg": "/static/media/bluesky-brands-solid-full.7f35bfd3a810e72328e7cfabe5a513d2.svg",
     "main.80b52f57.css.map": "/static/css/main.80b52f57.css.map",
-    "main.f9901353.js.map": "/static/js/main.f9901353.js.map",
+    "main.44d438d0.js.map": "/static/js/main.44d438d0.js.map",
     "533.d84b46ff.chunk.js.map": "/static/js/533.d84b46ff.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.80b52f57.css",
-    "static/js/main.f9901353.js"
+    "static/js/main.44d438d0.js"
   ]
 }
