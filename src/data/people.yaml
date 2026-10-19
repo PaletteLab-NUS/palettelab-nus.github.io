@@ -128,11 +128,19 @@
   color: "#FFE974"
   textColor: "#BD005B"
   interests:
-    - ""
+    - "Biodiversity"
+    - "Glass Blowing"
+    - "Disability"
+    - "Triathlon"
+    - "Crochet"
+    - "Music"
   trajectory:
-    - label: "Bay Area"
-      loc: "37°46'30.0\"N 122°25'10.0\"W"
+    - label: "Pleasant Hill"
+      loc: "37°37'30.0\"N 122°03'10.0\"W"
       note: "Born, California"
+    - label: “Lidingö, Sweden”
+      loc: "59°21'18.3\"N 18°09'48.4\"E"
+      note: “Childhood in Sweden”
     - label: "Basel"
       loc: "47°33'34.6\"N 7°35'19.0\"E"
       note: "Formative years, Switzerland"
