@@ -1,9 +1,11 @@
 {
   "files": {
     "main.css": "/static/css/main.80b52f57.css",
-    "main.js": "/static/js/main.44d438d0.js",
+    "main.js": "/static/js/main.f0a9872b.js",
     "static/js/533.d84b46ff.chunk.js": "/static/js/533.d84b46ff.chunk.js",
     "static/media/2026-intern-hci.PNG": "/static/media/2026-intern-hci.786860aa0cc5db43beb0.PNG",
+    "static/media/2026-churchill-2.jpeg": "/static/media/2026-churchill-2.d0f5d0b0ff8414ee23f0.jpeg",
+    "static/media/2026-churchill-1.jpeg": "/static/media/2026-churchill-1.feafd22411ba36eb4d19.jpeg",
     "static/media/2026-ssi-games.png": "/static/media/2026-ssi-games.bdb2bd75671a39dea4e3.png",
     "static/media/2026-ssi-tv.png": "/static/media/2026-ssi-tv.74ce7d29044e70a5105a.png",
     "static/media/2026-ssi-xiyuan.png": "/static/media/2026-ssi-xiyuan.f567cab165c00aad02bc.png",
@@ -11,6 +13,7 @@
     "static/media/2026-intern-massage.png": "/static/media/2026-intern-massage.18af8e73f279b9702bf2.png",
     "static/media/thuyen.jpg": "/static/media/thuyen.6d99157a9c88684e147e.jpg",
     "static/media/2026-intern-card.png": "/static/media/2026-intern-card.eddd09d4b1ce47072d4e.png",
+    "static/media/2026-churchill-3.jpeg": "/static/media/2026-churchill-3.51948b01803773437775.jpeg",
     "static/media/xiyuan.png": "/static/media/xiyuan.7af161b1518a5f727b07.png",
     "static/media/2026-intern-campus.JPG": "/static/media/2026-intern-campus.e608ee15a779001ff231.JPG",
     "static/media/2026-intern-farewell.png": "/static/media/2026-intern-farewell.be3fda87c42124c4daec.png",
@@ -70,11 +73,11 @@
     "index.html": "/index.html",
     "static/media/bluesky-brands-solid-full.svg": "/static/media/bluesky-brands-solid-full.7f35bfd3a810e72328e7cfabe5a513d2.svg",
     "main.80b52f57.css.map": "/static/css/main.80b52f57.css.map",
-    "main.44d438d0.js.map": "/static/js/main.44d438d0.js.map",
+    "main.f0a9872b.js.map": "/static/js/main.f0a9872b.js.map",
     "533.d84b46ff.chunk.js.map": "/static/js/533.d84b46ff.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.80b52f57.css",
-    "static/js/main.44d438d0.js"
+    "static/js/main.f0a9872b.js"
   ]
 }
