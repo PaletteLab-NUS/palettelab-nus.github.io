@@ -1,3 +1,13 @@
+- date: "2026-11-23"
+  about: >
+    Prof. Elizabeth Churchill visited our lab and we had a nice chat around our recent work.
+  photos:
+    - path: "2026-churchill-3.jpeg"
+      caption: "Everyone gathered in our lab space."
+    - path: "2026-churchill-1.jpeg"
+      caption: "We were watching at the cheerful lab introduction video."
+    - path: "2026-churchill-2.jpeg"
+      caption: "Prof. Elizabeth Churchill gave a brief introduction of research at MBZUAI."
 - date: "2026-10-02"
   about: >
     We presented our recent work at the Smart System Institute Gather-up and showed our demos!
