@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.80b52f57.css",
-    "main.js": "/static/js/main.f0a9872b.js",
+    "main.css": "/static/css/main.17411f7d.css",
+    "main.js": "/static/js/main.f088b3a3.js",
     "static/js/533.d84b46ff.chunk.js": "/static/js/533.d84b46ff.chunk.js",
     "static/media/2026-intern-hci.PNG": "/static/media/2026-intern-hci.786860aa0cc5db43beb0.PNG",
     "static/media/2026-churchill-2.jpeg": "/static/media/2026-churchill-2.d0f5d0b0ff8414ee23f0.jpeg",
@@ -72,12 +72,12 @@
     "static/media/bekzat.jpeg": "/static/media/bekzat.da73e417042819e70179.jpeg",
     "index.html": "/index.html",
     "static/media/bluesky-brands-solid-full.svg": "/static/media/bluesky-brands-solid-full.7f35bfd3a810e72328e7cfabe5a513d2.svg",
-    "main.80b52f57.css.map": "/static/css/main.80b52f57.css.map",
-    "main.f0a9872b.js.map": "/static/js/main.f0a9872b.js.map",
+    "main.17411f7d.css.map": "/static/css/main.17411f7d.css.map",
+    "main.f088b3a3.js.map": "/static/js/main.f088b3a3.js.map",
     "533.d84b46ff.chunk.js.map": "/static/js/533.d84b46ff.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.80b52f57.css",
-    "static/js/main.f0a9872b.js"
+    "static/css/main.17411f7d.css",
+    "static/js/main.f088b3a3.js"
   ]
 }
