@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home/Home";
 import People from "./components/People/People";
+import TestPeople from "./components/People/TestPeople";
 import Publications from "./components/Publications/Publications";
 import News from "./components/News/News";
 import Footer from "./components/Footer";
@@ -84,6 +85,7 @@ function AppContent() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/people" element={<People />} />
+            <Route path="/test-people" element={<TestPeople />} />
             <Route path="/publications" element={<Publications />} />
             <Route path="/memories" element={<News />} />
             {/* <Route path="/resume" element={<Resume />} /> */}

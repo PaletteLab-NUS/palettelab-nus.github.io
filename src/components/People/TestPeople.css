@@ -1,0 +1,50 @@
+/* Flat square tile on lime plaster. No bevel or shadow. */
+.team-card-back.sg-brick-back {
+  background: #efe4d0;
+  padding: 10px;
+  container-type: size;
+  border-color: rgba(120, 96, 62, 0.28);
+  overflow: hidden;
+}
+
+.sg-brick {
+  width: min(100cqw, 100cqh);
+  height: min(100cqw, 100cqh);
+  flex: none;
+  position: relative;
+  background: transparent;
+}
+
+.sg-tile {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Same type metrics as .team-card-interests on the main people page. */
+.sg-tile-label {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: max-content;
+  max-width: 92%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  align-items: center;
+  background: none;
+}
+
+.sg-tile-label li {
+  width: auto;
+  max-width: 100%;
+  padding: 0 0.2em;
+}
+
+.sg-tile-label li span {
+  display: inline-block;
+}
